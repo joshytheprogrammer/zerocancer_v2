@@ -6,14 +6,12 @@
     <title>Your Title Here</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <section class="header container">
         <div class="background">
-             <div class="image">
-            
-
             <div class="navbar sub-container">
                 <div class="logo">
                     <img src="./assets/img/zero_cancer-FULL-LOGO.png" width="80px" height="50px">
@@ -27,6 +25,23 @@
                 <div class="list2">
                     <a href="#">Contact Us</a>
                 </div>
+
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+
+                <div class="dropdown_menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Explorer</a></li>
+                    <li><a href="#">Modilab DVSS</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li>
+                        <div class="list2">
+                            <a href="#">Contact Us</a>
+                        </div>
+                     </li>
+                </div>
             </div>
 
             <div class="home-hero sub-container">
@@ -37,14 +52,9 @@
                
             </div>
             <div class="input-box">
-                <div class="int">
-                    <input type="email" placeholder="Enter Your Email Address">
-                </div>
+                <input type="email" placeholder="Enter Your Email Address">
                 
-                <div class="button">
-                    <a href="#" class="btn">Join The Waitlist</a>
-                </div>
-                
+                <button type="button">Join The Waitlist</button>           
             </div>
 
         </div>
@@ -58,16 +68,16 @@
                 </div>
                 <div class="about-p" id="aboutContent">
                     <p>At <strong>ZeroCancer</strong>, our primary value is rooted in spirituality, specifically anchored in the God of the Bible and His infinite healing power. We believe in a God of limitless possibilities, and we affirm that all diseases, including cancer, can be cured when we engage the mind of Christ. Spirituality guides our overall vision, mission, and values, underscoring our commitment to holistic well-being and the profound belief in the potential for healing through faith and mindfulness.
-                        <div class="more-about" id="moreAboutContent">
-                            <p><strong>Our Mission</strong> - To serve as a transformative force in the African continent's battle against cancer, ZeroCancer is dedicated to providing information, opportunities, facilities, networking, and professional guidance. Our mission is rooted in empowering individuals with comprehensive resources for cancer prevention, diagnosis, and treatment, ultimately contributing to the substantial reduction of the cancer burden across the continent.</p>
-                            <p><strong>Our Vision</strong>  - ZeroCancer envisions a future where 500 million Africans are onboarded within the next 5 years, fostering informed and connected communities. We aim to equip individuals with knowledge on cancers pertinent to them, providing opportunities for screening, donations, volunteer work, modern prevention and treatment methods, and networking. Our vision is to play a pivotal role in the mitigation of the cancer burden, fostering a continent where the impact of cancer is significantly diminished.
-                                <a href="#" id="readLessLink">Read Less</a><i class='bx bxs-right-top-arrow-circle'></i></p>
-        
-                            <img src="./assets/img/37e5af8cd71ed5a6eb2b3f864101671d.jpeg" width="700px" id="additionalImage">
-                        </div>
-                        <a href="#" id="readMoreLink">Read More</a><i class='bx bxs-right-down-arrow-circle'></i>
-                        <img src="./assets/img/about.png" width="800px">
-                        
+                    <div class="more-about" id="moreAboutContent">
+                        <p><strong>Our Mission</strong> - To serve as a transformative force in the African continent's battle against cancer, ZeroCancer is dedicated to providing information, opportunities, facilities, networking, and professional guidance. Our mission is rooted in empowering individuals with comprehensive resources for cancer prevention, diagnosis, and treatment, ultimately contributing to the substantial reduction of the cancer burden across the continent.</p>
+                        <p><strong>Our Vision</strong>  - ZeroCancer envisions a future where 500 million Africans are onboarded within the next 5 years, fostering informed and connected communities. We aim to equip individuals with knowledge on cancers pertinent to them, providing opportunities for screening, donations, volunteer work, modern prevention and treatment methods, and networking. Our vision is to play a pivotal role in the mitigation of the cancer burden, fostering a continent where the impact of cancer is significantly diminished.
+                        <a href="#" id="readLessLink">Read Less</a><i class='bx bxs-right-top-arrow-circle'></i></p>
+    
+                        <img src="./assets/img/37e5af8cd71ed5a6eb2b3f864101671d.jpeg" id="additionalImage">
+                    </div>
+                    <a href="#" id="readMoreLink">Read More</a><i class='bx bxs-right-down-arrow-circle'></i>
+                    <img src="./assets/img/about.png" width="800px">
+                    
                     </div>
                 </div>
             </div>
@@ -128,7 +138,7 @@
                 </div>
             </div>
             <div class="zero">
-                <img src="./assets/img/de7044d4d647a45a96baeeb6c542a3b5.png" width="1200px" height="700px">
+                <img src="./assets/img/de7044d4d647a45a96baeeb6c542a3b5.png">
             </div>
             
         </div>
@@ -170,11 +180,11 @@
             <h3>Connect with top-tier healthcare professionals</h3>
             <p>Stay tuned for a smarter, more convenient way to care for yourself with our innovative Digital App. Get notified when it’s available for download.</p>
             <div class="form">
-               <div class="subs">
-                <input type="email" placeholder="Enter Your Email"> 
-               </div>
+                <div class="subs">
+                    <input type="email" placeholder="Enter Your Email"> 
+                </div>
                 <div class="sub">
-                    <input type="submit">
+                    <button type="submit">Submit</button>
                 </div>
                 
             </div>
@@ -184,39 +194,42 @@
            <img src="./assets/img/mobile app.png">
         </div>
     </section>
-    <section class="conclude ">
-      <div class="concluded">
-        <div class="part1">
-            <img src="./assets/img/zero_cancer-FULL-LOGO.svg" >
-            <p>Reach out to us to discover how we can help you with the eradication of cancer. </p>
-            <strong>admin@zerocancer.africa</strong>
-           </div>
-           <div class="part2">
-             <h4>Company</h4>
-             <ul>About</ul>
-             <ul>Explorer</ul>
-             <ul>Modilab DVSS</ul>
-             <ul>Blog</ul>
-           </div>
-           <div class="part3">
-             <h4>Connect</h4>
-             <ul><a href="#">Facebook</a></ul>
-             <ul><a href="#">Twitter</a></ul>
-             <ul><a href="#">Instagram</a></ul>
-             <ul><a href="#">Linkden</a></ul>
-           </div>
-      </div>
-      <div class="end">
-         <div class="end1">
-            <i class='bx bx-copyright' ></i>2024 ZeroCancer - All rights reserved
-         </div>
-         <div class="end2">
-            <p>Legal Notice</p>
-         </div>
-         <div class="end3">
-            <p>Terms & Conditions</p>
-         </div>
-      </div>
+    <section class="conclude">
+        <div class="concluded sub-container">
+            <div class="part1">
+                <img src="./assets/img/zero_cancer-FULL-LOGO.svg" >
+                <p>Reach out to us to discover how we can help you with the eradication of cancer. </p>
+                <strong>admin@zerocancer.africa</strong>
+            </div>
+            <div class="part2">
+                <div class="part2_1">
+                    <h4>Company</h4>
+                    <ul>About</ul>
+                    <ul>Explorer</ul>
+                    <ul>Modilab DVSS</ul>
+                    <ul>Blog</ul>
+                </div>
+            
+                <div class="part2_2">
+                    <h4>Connect</h4>
+                    <ul><a href="#">Facebook</a></ul>
+                    <ul><a href="#">Twitter</a></ul>
+                    <ul><a href="#">Instagram</a></ul>
+                    <ul><a href="#">Linkden</a></ul>
+                </div>
+            </div>
+        </div>
+        <div class="end sub-container">
+            <div class="end1">
+                <i class='bx bx-copyright' ></i>2024 ZeroCancer - All rights reserved
+            </div>
+            <div class="end2">
+                <p>Legal Notice</p>
+            </div>
+            <div class="end3">
+                <p>Terms & Conditions</p>
+            </div>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
