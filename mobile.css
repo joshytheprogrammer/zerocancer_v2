@@ -149,7 +149,8 @@
     }
 
     .content {
-      display: block;
+      display: flex;
+      flex-direction: column-reverse;
       
 
       div {
@@ -168,6 +169,7 @@
   }
 
   .connect {
+    margin: 0 1rem;
     img {
       display: none;
     }
