@@ -1,0 +1,243 @@
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .jumbotron {
+    padding: 1rem;
+    height: 500px; 
+  }
+
+  nav {
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+
+    border: none;
+    border-radius: 0;
+    background: none;
+
+    img {
+      width: 80px;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .contact {
+      display: none;
+    }
+
+    .toggleMenu {
+      display: block;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+  }
+
+  .hero {
+    margin: 2rem 0;
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+
+    }
+
+    .waitlist-form  {
+      display: block;
+      font-size: 14px;
+
+      input {
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      button {
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 6px;
+      }
+      
+    }
+  }
+
+  .about {
+    .contact {
+      display: block;
+    }
+
+    .content .f {
+      display: block;
+    }
+
+    .desc {
+      width: 100%;
+      padding: 1rem 0;
+    }
+  }
+
+  .centre {
+    .content {
+      display: block;
+
+    }
+
+    .desc {
+      font-size: 14px;
+    }
+
+    .explorer {
+      display: block;
+      padding: 1rem;
+
+      select {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+  
+      button {
+        width: 100%;
+  
+        .icon {
+          display: none;
+        }
+  
+        span {
+          display: block;
+          font-size: 16px;
+        }
+      }
+    }
+    
+  }
+
+  .dvss {
+    .q {
+      display: block;
+
+      .content {
+        display: block;
+  
+        .f {
+          display: block;
+        }
+      }
+    }
+
+    .desc {
+      width: 100%;
+      padding: 1rem 0;
+    }
+  }
+
+  .blog {
+    .f {
+      display: block;
+      padding: 0;
+    }
+
+    .content {
+      display: block;
+      
+
+      div {
+        padding: 1rem;
+      }
+
+
+    }
+
+
+    
+
+    .head {
+      padding: 1rem 3rem;
+    }
+  }
+
+  .connect {
+    img {
+      display: none;
+    }
+
+    .content {
+      padding: 2rem 0;
+    }
+
+    .connect-form {
+      display: block;
+  
+      input {
+        width: 100%;
+        border-radius: 6px;
+      }
+  
+      button {
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 6px;
+      }
+  
+    }
+
+  }
+  
+
+  .readLink {
+    padding: 0;
+  }
+
+  .about, .centre, .dvss, .blog, .connect {
+    max-width: 100%;
+    padding: 0 1rem;
+    display: block;
+  }
+
+  .about img,
+  .dvss img,
+  .connect img{
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  
+
+  footer {
+    padding: 3rem 0;
+
+    .container {
+      max-width: 100%;
+      padding: 0 1rem;
+
+      .content {
+        flex-direction: column;
+      }
+
+      .final {
+        flex-direction: column;
+        align-items: flex-start;
+
+        div {
+          width: 100%;
+          padding: 1rem 0;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+
+}
+

@@ -1,49 +1,67 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var readMoreLink = document.getElementById('readMoreLink');
-    var readLessLink = document.getElementById('readLessLink');
-    var moreAboutContent = document.getElementById('moreAboutContent');
-    var additionalImage = document.getElementById('additionalImage');
-    var lastParagraph = document.getElementById('lastParagraph');
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the read more and read less links
+    var readMoreLink = document.getElementById("aboutReadMoreLink");
+    var readLessLink = document.getElementById("aboutReadLessLink");
 
-    // Initially hide the "Read Less" link, additional content, and the duplicate image
-    readLessLink.style.display = 'none';
-    moreAboutContent.style.display = 'none';
-    additionalImage.style.display = 'none';
+    // Get reference to the moreAboutContent div
+    var moreAboutContent = document.getElementById("moreAboutContent");
 
-    readMoreLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        moreAboutContent.style.display = 'block';
-        readMoreLink.style.display = 'none';
-        readLessLink.style.display = 'inline';
-        additionalImage.style.display = 'none'; // Hide the duplicate image
+    // Set initial state - hide "Read less" link and more content
+    readLessLink.style.display = "none";
+    moreAboutContent.style.display = "none";
 
-        // Append the image to the last paragraph
-        lastParagraph.appendChild(additionalImage);
-
-        moreAboutContent.scrollIntoView({ behavior: 'smooth' });
+    // Add click event listener to the "Read more" link
+    readMoreLink.addEventListener("click", function() {
+        // Toggle the visibility of the content and links
+        moreAboutContent.style.display = "block";
+        readMoreLink.style.display = "none";
+        readLessLink.style.display = "block";
     });
 
-    readLessLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        moreAboutContent.style.display = 'none';
-        readMoreLink.style.display = 'inline';
-        readLessLink.style.display = 'none';
-        additionalImage.style.display = 'block'; // Show the duplicate image
+    // Add click event listener to the "Read less" link
+    readLessLink.addEventListener("click", function() {
+        // Toggle the visibility of the content and links
+        moreAboutContent.style.display = "none";
+        readMoreLink.style.display = "block";
+        readLessLink.style.display = "none";
+    });
 
-        // Move the image back to its original position
-        document.getElementById('imageContainer').appendChild(additionalImage);
+    // Get references to the read more and read less links in the second section
+    var readMoreLinkDvss = document.getElementById("dvssReadMoreLink");
+    var readLessLinkDvss = document.getElementById("dvssReadLessLink");
+
+    // Get reference to the moreAboutContent div in the second section
+    var moreAboutContentDvss = document.querySelector(".dvss #moreAboutContent");
+
+    // Set initial state - hide "Read less" link and more content
+    readLessLinkDvss.style.display = "none";
+    moreAboutContentDvss.style.display = "none";
+
+    // Add click event listener to the "Read more" link in the second section
+    readMoreLinkDvss.addEventListener("click", function() {
+        // Toggle the visibility of the content and links in the second section
+        moreAboutContentDvss.style.display = "block";
+        readMoreLinkDvss.style.display = "none";
+        readLessLinkDvss.style.display = "block";
+    });
+
+    // Add click event listener to the "Read less" link in the second section
+    readLessLinkDvss.addEventListener("click", function() {
+        // Toggle the visibility of the content and links in the second section
+        moreAboutContentDvss.style.display = "none";
+        readMoreLinkDvss.style.display = "block";
+        readLessLinkDvss.style.display = "none";
+    });
+
+    const toggleMenu = document.querySelector('.toggleMenu');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeBtn = document.querySelector('.close-btn');
+
+    toggleMenu.addEventListener('click', function () {
+        mobileNav.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function () {
+        mobileNav.style.display = 'none';
     });
 });
-
-const toggleBtn = document.querySelector('.toggle_btn')
-const toggleBtnIcon = document.querySelector('toggle_btn i')
-const dropDownMenu = document.querySelector('dropdown_menu')
-
-toggleBtn.onclick = function (){
-    dropDownMenu.classList.toggle('open')
-    const isopen = dropDownMenu.classList.contains('open')
-
-    toggleBtnIcon.classList = isopen
-    ? 'fa-solid fa-xmark'
-    : 'fa-solid fa-bars'
-}
