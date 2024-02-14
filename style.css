@@ -575,6 +575,7 @@ footer {
   }
 }
 
+
 #moreAboutContent {
   display: none;
   align-items: flex-end;
@@ -617,3 +618,119 @@ footer {
         color: var(--primary-dark);
     }
 }
+
+button[disabled],  .waitlist-form button[disabled], .blog .content button[disabled], .connect .connect-form button[disabled], #searchCentreButton[disabled] {
+  background-color: rgba(51, 102, 153, 0.5);
+  cursor: not-allowed;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow-y: auto;
+    width: 60%;
+    margin: 2rem auto;
+    max-width: 600px;
+    max-height: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .close-button {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      h2 {
+        font-size: 32px;
+        color: var(--primary-dark);
+      }
+    
+    }
+
+    #cardContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      h2 {
+        font-size: 24px;
+      }
+
+    
+
+      .card {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 1rem 0;
+
+        .badge {
+          display: block;
+          width: fit-content;
+          border: 1px solid var(--primary-dark);
+          background-color: var(--primary-light);
+          color: var(--dark);
+          font-size: 12px;
+          padding: .4rem 1rem;
+          margin-bottom: 1rem;
+          border-radius: 4rem;
+        }
+
+        .loc, .inq {
+          padding: 12px 0;
+
+          p:nth-child(1) {
+            font-size: 18px;
+          }
+
+          p:nth-child(2) {
+            font-weight: 700;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4px;
+          }
+        }
+
+        a {
+          background-color: var(--primary);
+          border-radius: 12px;
+          color: var(--light);
+          display: block;
+          width: fit-content;
+          margin: 1rem 0;
+          padding: 1rem 2rem;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+
+  
+}
+

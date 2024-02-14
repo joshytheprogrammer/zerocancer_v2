@@ -23,7 +23,7 @@
                 <a href="#blog">Blog</a>
             </div>
             <div class="contact">
-                <a href="">Contact Us</a>
+                <a href="mailto:admin@zerocancer.africa">Contact Us</a>
             </div>
             <!-- Mobile Nav -->
             <div class="mobile-nav">
@@ -42,12 +42,23 @@
             <h1>Embark on Your Path to <br> Wellness with Zer<span>o</span> Cancer.</h1>
             <p>At Zero Cancer, we believe in instilling hope and resilience in every step of the treatment journey. Cervical cancer may be a formidable opponent, but with our dedicated team by your side, we aim to empower you to overcome it.</p>
             <div class="waitlist-form">
-                <input type="email" placeholder="Enter Your Email Address">
-                <button type="button">Join The Waitlist</button>  
+                <input type="email" disabled placeholder="Enter Your Email Address (coming soon)">
+                <button type="button" disabled>Join The Waitlist</button>  
             </div>
         </div>
 
     </div>
+    <div class="modal-container" id="modalContainer" style="display: none;">
+        <div class="modal-content">
+          <header>
+            <h2 id="modalTitle">Centres Available</h2>
+            <span class="close-button" id="closeModalXSpan">&times;</span>
+          </header>
+          <div id="cardContainer">
+            
+          </div>
+        </div>
+    </div>      
     <section class="about">
         <p data-aos="fade-down-right" class="head" id="about">About</p>
         <div class="content">
@@ -90,31 +101,24 @@
                 The <strong>Zero Cancer Center Explorer</strong> on our website simplifies the search for cancer centers in Nigeria. Users input their state and region, and the tool instantly displays all available centers in that area. This streamlined process ensures quick access to crucial cancer prevention and treatment resources, making it a user-friendly and efficient tool in the fight against cancer.<br><a href="#" class="readLink">Order Online</a> 
             </p>
         </div>
-        <div data-aos="fade-up" class="explorer">
+        <div id="loadingIndicator" style="display: none;">
+            Loading...
+        </div>
+        <div data-aos="fade-up" class="explorer" id="expCont">
+            
             <select id="state" name="state">
-                <option value="" disabled selected hidden>Select a State</option>
-                <option value="Anambra">Anambra</option>
-                <option value="Abuja">Abuja</option>
-                <option value="Bayelsa">Bayelsa</option>
-                <option value="Enugu">Enugu</option>
-                <option value="Imo">Imo</option>
-                <option value="Lagos">Lagos</option>
-                <option value="Ogun">Ogun</option>
+                <option value="" disabled selected>Select a State</option>
             </select>
 
             <select id="region" name="region">
-                <option value="" disabled selected hidden>Select a Region</option>
-                <option value="Gwarinpa">Gwarinpaa</option>
-                <option value="Kubwa">Kubwa</option>
-                <option value="Nyanya">Nyanya</option>
-                <option value="Wuse II">Wuse II</option>
+                <option value="" disabled selected>Please select a state first</option>
             </select>
-            <button>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14"/></svg>
-                <span>Search</span>
+            <button id="searchCentreButton" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3m0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8"/></svg>
             </button>
         </div>
     </section>
+      
     <section class="dvss "> 
         <div class="q">
             <p data-aos="fade-down-right" class="head" id="dvss">Product</p>
@@ -199,7 +203,7 @@
                 <span class="tag">featured</span>
                 <h2>Empowering Lives: A Guide to Early Cancer Detection</h2>
                 <p> In this blog post, we delve into the critical importance of early cancer detection and provide a comprehensive guide on screening methods, risk factors, and proactive measures. Learn about the latest advancements in diagnostic technologies and gain insights from survivor stories that highlight the impact of early intervention. Join us on the journey to empower lives through awareness and education, as we strive for a world with zero cancer. #EarlyDetection #CancerPrevention #EmpowerLives</p>
-                <button>Read</button>
+                <button disabled>Read</button>
             </div>
             <img src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574959/zerocancer/2df6c2afb0790b632e24ce69d1446a4f_nep50u.png" alt="c">
         </div>
@@ -209,8 +213,8 @@
             <h2>Connect with top tier healthcare professionals</h2>
             <p>Stay tuned for a smarter, more convenient way to care for yourself with our innovative Digital App. Get notified when it's available for download.</p>
             <div class="connect-form">
-                <input type="email" placeholder="Enter your email address">
-                <button type="button">Submit</button>  
+                <input type="email" disabled placeholder="Enter your email address ">
+                <button type="button" disabled>Submit</button>  
             </div>
         </div>
         <img src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574931/zerocancer/mobile_app_q7phoq.png" alt="c">
@@ -238,7 +242,7 @@
                         <div class="links">
                             <a href="#">Facebook</a>
                             <a href="#">Twitter</a>
-                            <a href="">Linkedin</a>
+                            <a href="https://www.linkedin.com/company/zerocancer/">Linkedin</a>
                             <a href="#">Instagram</a>
                         </div>
 
@@ -265,5 +269,6 @@
        // AOS.init();
     </script>
     <script type="module" src="script.js"></script>
+    <script type="module" src="formLogic.js"></script>
 </body>
 </html>

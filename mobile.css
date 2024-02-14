@@ -195,6 +195,18 @@
     }
 
   }
+
+
+  .modal-container {
+
+    .modal-content {
+      width: 90%;
+      
+    }
+
+    
+  }
+
   
 
   .readLink {
