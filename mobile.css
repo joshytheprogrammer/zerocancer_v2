@@ -101,6 +101,12 @@
       display: block;
       padding: 1rem;
 
+      #loadingIndicator {
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+      }
+
       select {
         display: block;
         margin-bottom: 1rem;
