@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 1024px) {
   body {
     font-size: 14px;
@@ -46,6 +47,12 @@
       font-size: 28px;
       line-height: 1.4;
       font-weight: 700;
+
+      img {
+        top: 51px;
+        left: 239px;
+        max-height: 20px;
+      }
     }
 
     p {
@@ -259,5 +266,65 @@
   }
 
 
+}
+
+@media screen and (max-width: 380px) {
+  .hero {
+    h1 {
+      font-size: 24px;
+
+      img {
+        top: 43px;
+        left: 204px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  footer {
+    .container {
+      .content{ 
+        .f  p{
+          font-size: 14px;
+          a{
+            font-size: 16px;
+          }
+        }
+
+        .s {
+          div {
+            .links {
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .final {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 332px) {
+  .hero {
+    h1 {
+      font-size: 24px;
+
+      img {
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
 }
 
