@@ -17,9 +17,11 @@ const fetchDataFromFirestore = async () => {
       centres: [],
     };
 
-    const stateSnapshot = await getDocs(collection(db, 'locations', 'states', 'state'));
-    const regionSnapshot = await getDocs(collection(db, 'locations', 'regions', 'region'));
-    const centreSnapshot = await getDocs(collection(db, 'locations', 'centres', 'centre'));
+    const [stateSnapshot, regionSnapshot, centreSnapshot] = await Promise.all([
+      getDocs(collection(db, 'locations', 'states', 'state')),
+      getDocs(collection(db, 'locations', 'regions', 'region')),
+      getDocs(collection(db, 'locations', 'centres', 'centre')),
+    ]);
 
     stateSnapshot.forEach((doc) => {
       data.states.push({ id: doc.id, ...doc.data() });
@@ -40,6 +42,7 @@ const fetchDataFromFirestore = async () => {
     console.error('Error fetching data from Firestore:', error);
   }
 };
+
 
 // Call the function to fetch data
 const data = await fetchDataFromFirestore();
