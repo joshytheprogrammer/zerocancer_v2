@@ -321,6 +321,15 @@ nav {
   
 }
 
+.envoys {
+  max-width: 80%;
+  margin: 5rem auto;
+  .content {
+
+  }
+
+}
+
 /* DVSS Section Styles */
 .dvss {
   max-width: 80%;
