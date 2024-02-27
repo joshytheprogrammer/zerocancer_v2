@@ -393,6 +393,12 @@ nav {
       font-size: 14px;
       color: var(--dark);
       border-bottom: 1px solid rgba(255,255,255,0.1);
+
+      .l {
+        cursor: pointer;
+        text-decoration: underline;
+
+      }
     }
 
     ::-webkit-scrollbar {
