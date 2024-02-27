@@ -362,6 +362,8 @@ nav {
     margin: 2rem 0;
     border-radius: 12px;
     border: 1px solid #ddd;
+    position: relative;
+    overflow-x: hidden;
     
     table{
       width:100%;
@@ -394,21 +396,116 @@ nav {
       color: var(--dark);
       border-bottom: 1px solid rgba(255,255,255,0.1);
 
+      .name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          border-radius: 100%;
+          object-fit: cover;
+          width: 50px;
+          height: 50px;
+        }
+      }
+
       .l {
+        padding: 0 .2rem;
         cursor: pointer;
         text-decoration: underline;
+      }
 
+    }
+
+    .slide-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100%;
+      background-color: var(--light);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      display: none;
+
+      &.slide-menu-active {
+        display: block;
+      }
+
+      .content {
+        .body {
+          padding: 1rem;
+
+          img {
+            width: 300px;
+            border-radius: 12px;
+          }
+
+          .values {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 0;
+
+            .key {
+              font-size: 18px;
+              font-weight: 500;
+            }
+
+            .value {
+              font-size: 14px;
+              font-weight: 300;
+
+              &.s {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: .4rem 0;
+                gap: 12px;
+              }
+
+              .t {
+                padding: .2rem .8rem;
+                border: 1px solid var(--dark);
+                border-radius: 4rem;
+                width: fit-content;
+                font-weight: 300;
+                font-size: 14px;
+              }
+            }
+          }        
+        }
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: var(--primary-light);
+          padding: 1rem 15px;
+          border-bottom: 1px solid #ddd;
+    
+          .close-button {
+            display: block;
+            font-size: 20px;
+            cursor: pointer;
+          }
+    
+          h2 {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
       }
     }
 
     ::-webkit-scrollbar {
-      width: 6px;
+      width: 2px;
     } 
     ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3); 
     } 
     ::-webkit-scrollbar-thumb {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3); 
     }
   }
 }

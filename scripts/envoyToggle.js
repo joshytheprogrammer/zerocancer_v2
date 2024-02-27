@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const listEnvoyButton = document.getElementById("listEnvoyButton");
   const hideEnvoyButton = document.getElementById("hideEnvoyButton");
   const envoyTable = document.getElementById("envoyTable");
+  const slideMenu = document.getElementById("envoySlideMenu")
+  const viewIteminEnvoy = document.getElementById("viewItemInEnvoyTableSpan");
+  const closeEnvoyMenu = document.getElementById("closeSlideMenuItem");
 
   // Add click event listeners to buttons
   listEnvoyButton.addEventListener("click", function () {
@@ -17,4 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     envoyTable.style.display = "none";
   });
+
+  viewIteminEnvoy.addEventListener("click", function () {
+    slideMenu.classList.toggle("slide-menu-active");
+  });
+
+  closeEnvoyMenu.addEventListener("click", function () {
+    slideMenu.classList.toggle("slide-menu-active");
+  })
+
 });
