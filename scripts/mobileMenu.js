@@ -12,6 +12,6 @@ export function initMobileMenu(toggleMenu, mobileNav, closeBtn, navLinks) {
   window.addEventListener('beforeunload', closeMobileMenu);
 
   navLinks.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
+    link.addEventListener('click', closeMobileMenu);
   });
 }

@@ -67,7 +67,7 @@
         <div class="content">
             <div data-aos="fade-left" class="f">
                 <p class="desc">
-                    Zerocancer is a comprehensive cancer prevention initiative dedicated to minimizing the occurrence of new cases of cervical, breast, prostate, and colon cancers. Our multifaceted approach involves extensive awareness campaigns, public enlightenment, immunization, and screening initiatives. We firmly believe that early detection is key to effective treatment and, as such, we prioritize identifying individuals at high risk through thorough screening processes.
+                    Zerocancer is a comprehensive cancer prevention initiative dedicated to minimizing the occurrence of new cases of cervical, breast, prostate, and colon cancers. Our multifaceted approach involves extensive awareness campaigns, public enlightenment, immunization, and screening initiatives. We firmly believe that early detection is key to effective treatment and, as such, we prioritize identifying individuals at high risk through thorough high performance screening processes.
                 </p>
                 <p class="readLink">
                     <a id="aboutReadMoreLink">Read more</a>
@@ -101,7 +101,7 @@
         <div class="content">
             <p data-aos="fade-down-right" class="head">Explorer</p>
             <p data-aos="fade-left" class="desc">
-                The <strong>ZeroCancer Center Explorer</strong> on our website simplifies the search for cancer centers in Nigeria. Users input their state and region, and the tool instantly displays all available centers in that area. This streamlined process ensures quick access to crucial cancer prevention and treatment resources, making it a user-friendly and efficient tool in the fight against cancer.<br><a href="https://forms.gle/E2pSWyj2hyCZ6YzT8" class="readLink">Order Online</a> 
+                The <strong>ZeroCancer Center Explorer</strong>is a search tool that simplifies the discovery of cancer centers in the country. Users input their state and region, and the tool instantly displays all available centers in that area. This streamlined process ensures quick access to crucial cancer prevention and treatment resources, making it a user-friendly and efficient tool in the fight against cancer. Cancer screening kits and devices may also be searched and ordered using the explorer.  <br><a href="https://forms.gle/E2pSWyj2hyCZ6YzT8" class="readLink">Order Online</a> 
             </p>
         </div>
         
@@ -123,20 +123,50 @@
     </section>
     <section class="envoys">
         <div class="content">
-            <h2>ZeroCancer Envoys</h2>
-            <p>We have a list of professional healthcare workers who are passionate about our cause, ranging from different specialties. Are you an healthcare worker, why don't you join us and fight the battle for zero cancer. <a href="https://forms.gle/yri85hThoptuHqf27">Click here to join.</a></p>
+            <h2>Zerocancer Envoys</h2>
+            <p>We have a list of professional healthcare workers who are passionate about our cause, ranging from different specialties. Are you an healthcare worker, why don't you join us and fight the battle for zero cancer. <a href="https://forms.gle/yri85hThoptuHqf27">Click here to join</a></p>
             <div class="btns">
-                <button type="button">List Envoys</button>
-                <button type="button">Hide Envoys</button>
+                <button type="button" id="listEnvoyButton">List Envoys</button>
+                <button type="button" id="hideEnvoyButton" style="display: none;">Hide Envoys</button>
             </div>
         </div>
-        <div class="table">
-
+        <!-- style="display: none;" -->
+        <div class="table" id="envoyTable" cellpadding="0" cellspacing="0" border="0">
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Place of Work</th>
+                      <th>Date added</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td>Candace Emeri</td>
+                            <td>LakeSheer</td>
+                            <td>Feb 03, 2024 </td>
+                            <td>View</td>
+                        </tr>
+                        <tr>
+                            <td>David Simpson</td>
+                            <td>Cu Med Centre</td>
+                            <td>Jan 09, 2024</td>
+                            <td>View</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
     <section class="dvss "> 
         <div class="q">
-            <p data-aos="fade-down-right" class="head" id="dvss">Product</p>
+            <p data-aos="fade-down-right" class="head" id="dvss">Facts</p>
             <div class="content">
                 <div data-aos="fade-left" class="f">
                     <div class="desc">
@@ -285,5 +315,6 @@
     </script>
     <script type="module" src="script.js"></script>
     <script type="module" src="formLogic.js"></script>
+    <script type="module" src="scripts/envoyToggle.js"></script>
 </body>
 </html>
