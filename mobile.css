@@ -136,6 +136,17 @@
     
   }
 
+  .envoys {
+    .content {
+      .btns button {
+        width: 100%;
+      }
+    }
+    .table {
+      overflow-x: auto;
+    }
+  }
+
   .dvss {
     .q {
       display: block;
@@ -226,7 +237,7 @@
     padding: 0;
   }
 
-  .about, .centre, .dvss, .blog, .connect {
+  .about, .centre, .dvss, .blog, .connect, .envoys {
     max-width: 100%;
     padding: 0 1rem;
     display: block;

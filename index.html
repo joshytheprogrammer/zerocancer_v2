@@ -130,7 +130,9 @@
                 <button type="button" id="hideEnvoyButton" style="display: none;">Hide Envoys</button>
             </div>
         </div>
-        <!-- -->
+        <div id="loadingIndicator2">
+            <div class="custom-loader"></div>
+        </div>
         <div class="table" style="display: none;" id="envoyTable" cellpadding="0" cellspacing="0" border="0">
             <div class="tbl-header">
                 <table cellpadding="0" cellspacing="0" border="0">
@@ -147,84 +149,7 @@
             <div class="tbl-content">
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tbody>
-                        <tr>
-                            <td>
-                                <div class="name">
-                                    <img src="https://imgs.search.brave.com/Qmrhq1scPCBh5weOkzTb-HQzEo3L8zp3_9ze3bOlYkE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtMi5qcGc" alt="profile">
-                                    <span>Candace Emeri</span>
-                                </div>
-                            </td>
-                            <td>LakeSheer</td>
-                            <td>Feb 03, 2024 </td>
-                            <td>
-                                <span class="l" id="viewItemInEnvoyTableSpan">View</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="name">
-                                    <img src="https://imgs.search.brave.com/bA-zYbXcmkJQjH05FmzFHWJAeW9PF949YP44Dm05etU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTM4/NzA5MzYyL3Bob3Rv/L3BvcnRyYWl0LW9m/LWEtZ2lybC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VVFH/WHBlaUxySTc4bk8x/QjlwZVVuMEQwZkNT/UnJtLUo4eG9oTVdH/Mkxtcz0" alt="profile">
-                                    <span>David Simpson</span>
-                                </div>
-                            </td>
-                            <td>Cu Med Centre</td>
-                            <td>Jan 09, 2024</td>
-                            <td>
-                                <span class="l">View</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="name">
-                                    <img src="https://imgs.search.brave.com/Qmrhq1scPCBh5weOkzTb-HQzEo3L8zp3_9ze3bOlYkE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtMi5qcGc" alt="profile">
-                                    <span>Candace Emeri</span>
-                                </div>
-                            </td>
-                            <td>LakeSheer</td>
-                            <td>Feb 03, 2024 </td>
-                            <td>
-                                <span class="l">View</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="name">
-                                    <img src="https://imgs.search.brave.com/bA-zYbXcmkJQjH05FmzFHWJAeW9PF949YP44Dm05etU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTM4/NzA5MzYyL3Bob3Rv/L3BvcnRyYWl0LW9m/LWEtZ2lybC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VVFH/WHBlaUxySTc4bk8x/QjlwZVVuMEQwZkNT/UnJtLUo4eG9oTVdH/Mkxtcz0" alt="profile">
-                                    <span>David Simpson</span>
-                                </div>
-                            </td>
-                            <td>Cu Med Centre</td>
-                            <td>Jan 09, 2024</td>
-                            <td>
-                                <span class="l">View</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="name">
-                                    <img src="https://imgs.search.brave.com/Qmrhq1scPCBh5weOkzTb-HQzEo3L8zp3_9ze3bOlYkE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtMi5qcGc" alt="profile">
-                                    <span>Candace Emeri</span>
-                                </div>
-                            </td>
-                            <td>LakeSheer</td>
-                            <td>Feb 03, 2024 </td>
-                            <td>
-                                <span class="l">View</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="name">
-                                    <img src="https://imgs.search.brave.com/bA-zYbXcmkJQjH05FmzFHWJAeW9PF949YP44Dm05etU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTM4/NzA5MzYyL3Bob3Rv/L3BvcnRyYWl0LW9m/LWEtZ2lybC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VVFH/WHBlaUxySTc4bk8x/QjlwZVVuMEQwZkNT/UnJtLUo4eG9oTVdH/Mkxtcz0" alt="profile">
-                                    <span>David Simpson</span>
-                                </div>
-                            </td>
-                            <td>Cu Med Centre</td>
-                            <td>Jan 09, 2024</td>
-                            <td>
-                                <span class="l">View</span>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -236,23 +161,27 @@
                         <span class="close-button" id="closeSlideMenuItem">&times;</span>
                     </div>
                     <div class="body">
-                        <img src="https://imgs.search.brave.com/Qmrhq1scPCBh5weOkzTb-HQzEo3L8zp3_9ze3bOlYkE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9leHBl/cnRwaG90b2dyYXBo/eS5iLWNkbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDgvcHJvZmlsZS1w/aG90b3MtMi5qcGc" alt="profile">
+                        <img src="" alt="profile" >
                         <div class="values">
-                            <h2 class="key">Candace Emeri</h2>
-                            <p class="value">Medical Doctor</p>
-                            <h2 class="key">Place of Work</h2>
-                            <p class="value">Lakeshore Cancer Centre</p>
-                            <h2 class="key">Vision</h2>
-                            <p class="value"><a href="youtube.com">candace_emeri_vision_statement.mp4</a></p>
-                            <h2 class="key">Specialty</h2>
-                            <div class="value s">
-                                <div class="t">Psychologist</div>
-                                <div class="t">Cardiologist</div>
-                                <div class="t">Octologidt</div>
-                                <div class="t">Cardiologist</div>
-                                <div class="t">Octologidt</div>
-                                <div class="t">Octologidt</div>
+                            <div class="fi_">
+                                <h2 class="key"></h2>
+                                <p class="value"></p>
                             </div>
+                            <div class="se_">
+                                <h2 class="key">Place of Work</h2>
+                                <p class="value"></p>
+                            </div>
+                            <div class="th_">
+                                <h2 class="key">Vision</h2>
+                                <p class="value"><a href=""></a></p>
+                            </div>
+                            <div class="fo_">
+                                <h2 class="key">Specialty</h2>
+                                <div class="value s">
+                                    
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                     <!-- Add content for the right slide menu here -->

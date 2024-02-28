@@ -358,6 +358,9 @@ nav {
     }
   }
 
+  #loadingIndicator2 {
+    margin: 1rem 0;
+  }
   .table {
     margin: 2rem 0;
     border-radius: 12px;
