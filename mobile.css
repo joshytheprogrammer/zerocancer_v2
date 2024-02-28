@@ -144,6 +144,20 @@
     }
     .table {
       overflow-x: auto;
+
+      .tbl-header {
+        width: 760px;
+      }
+
+      .tbl-content {
+        width: 760px;
+      }
+
+      .slide-menu {
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+      }
     }
   }
 
