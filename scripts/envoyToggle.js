@@ -1,54 +1,3 @@
-// import { db, collection, getDocs } from "../firebase.js";
-
-// const listEnvoyButton = document.getElementById("listEnvoyButton");
-// const hideEnvoyButton = document.getElementById("hideEnvoyButton");
-// const envoyTable = document.getElementById("envoyTable");
-// const slideMenu = document.getElementById("envoySlideMenu")
-// const viewIteminEnvoy = document.getElementById("viewItemInEnvoyTableSpan");
-// const closeEnvoyMenu = document.getElementById("closeSlideMenuItem");
-
-// // Add click event listeners to buttons
-// listEnvoyButton.addEventListener("click", function () {
-//   listEnvoyButton.style.display = "none";
-//   hideEnvoyButton.style.display = "block";
-  
-//   envoyTable.style.display = "block";
-// });
-
-// hideEnvoyButton.addEventListener("click", function () {
-//   listEnvoyButton.style.display = "block";
-//   hideEnvoyButton.style.display = "none";
-  
-//   envoyTable.style.display = "none";
-// });
-
-// viewIteminEnvoy.addEventListener("click", function () {
-//   slideMenu.classList.toggle("slide-menu-active");
-// });
-
-// closeEnvoyMenu.addEventListener("click", function () {
-//   slideMenu.classList.toggle("slide-menu-active");
-// });
-
-// const fetchEnvoys = async () => {
-//   try {
-//     const data = [];
-
-//     const envoysSnapshot = await getDocs(collection(db, 'envoys'));
-
-//     envoysSnapshot.forEach((doc) => {
-//       data.push({ id: doc.id, ...doc.data() });
-//     });
-    
-//     return data;
-//   } catch (error) {
-//     console.error('Error fetching data from Firestore:', error);
-//   }
-// }
-
-// const envoys = await fetchEnvoys();
-// console.log(envoys)
-
 import { db, collection, getDocs } from "../firebase.js";
 
 const listEnvoyButton = document.getElementById("listEnvoyButton");
@@ -81,7 +30,7 @@ const envoys = await fetchEnvoys();
 // Add click event listeners to buttons
 listEnvoyButton.addEventListener("click", async function () {
   listEnvoyButton.style.display = "none";
-  hideEnvoyButton.style.display = "block";
+  hideEnvoyButton.style.display = "flex";
 
   envoyTable.style.display = "block";
 
@@ -90,7 +39,7 @@ listEnvoyButton.addEventListener("click", async function () {
 });
 
 hideEnvoyButton.addEventListener("click", function () {
-  listEnvoyButton.style.display = "block";
+  listEnvoyButton.style.display = "flex";
   hideEnvoyButton.style.display = "none";
 
   envoyTable.style.display = "none";
