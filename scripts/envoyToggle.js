@@ -72,15 +72,21 @@ const populateTable = (envoys) => {
 
   envoys.forEach((envoy) => {
     const row = document.createElement("tr");
+    const formattedDate = envoy.dateAdded.toDate().toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+    
     row.innerHTML = `
       <td>
         <div class="name">
           <img src="${envoy.profileImage}" alt="profile">
-          <span>${envoy.name}</span>
+          <span>${envoy.fullName}</span>
         </div>
       </td>
       <td>${envoy.placeOfWork}</td>
-      <td>${envoy.dateAdded}</td>
+      <td>${formattedDate}</td>
       <td>
         <span class="l envoySpanViewLink" data-id="${envoy.id}">View</span>
       </td>
@@ -104,19 +110,19 @@ const populateSlideMenu = (envoy) => {
 
   // Add other elements you want to populate in the slide menu
   profileImage.src = envoy.profileImage;
-  profileImage.alt = 'profile for '+envoy.name+' in zero cancer envoy list.'
-  name.textContent = envoy.name;
+  profileImage.alt = 'profile for '+envoy.fullName+' in zero cancer envoy list.'
+  name.textContent = envoy.fullName;
   title.textContent = envoy.title;
   placeOfWork.textContent = envoy.placeOfWork;
   visionLink.href = envoy.visionLink;
-  visionLink.textContent = envoy.name.toLowerCase().replace(/ /g, "_") + "_vision_statement";
+  visionLink.textContent = envoy.fullName.toLowerCase().replace(/ /g, "_") + "_vision_statement";
 
   specialtiesContainer.textContent = ""
 
   envoy.specialties.forEach((specialty) => {
     const specialtyElement = document.createElement("div");
     specialtyElement.classList.add("t");
-    specialtyElement.textContent = specialty;
+    specialtyElement.textContent = specialty.label;
     specialtiesContainer.appendChild(specialtyElement);
   });
 };
