@@ -454,6 +454,7 @@ nav {
             display: flex;
             flex-direction: column;
             padding: 1rem 0;
+            gap: 1rem;
 
             .key {
               font-size: 18px;
@@ -464,12 +465,16 @@ nav {
               font-size: 14px;
               font-weight: 300;
 
-              &.s {
+              &.s, &.m, &.q {
                 display: flex;
                 justify-content: flex-start;
                 flex-wrap: wrap;
                 margin: .4rem 0;
                 gap: 12px;
+              }
+
+              &.v_s {
+                font-size: 12px;
               }
 
               .t {
@@ -480,6 +485,8 @@ nav {
                 font-weight: 300;
                 font-size: 14px;
               }
+
+
             }
           }        
         }
