@@ -205,6 +205,52 @@ nav {
   }
 }
 
+.videos {
+  max-width: 80%;
+  margin: 5rem auto;
+  
+  .vTab-container {
+    display: flex;
+    /* gap: 1rem; */
+
+    border: 1px solid var(--dark);
+    padding: 4px;
+    gap: 4px;
+    border-radius: 4rem;
+    width: fit-content;
+
+    .tab {
+      padding: 12px 1rem;
+      border-radius: 4rem;
+
+      &:hover {
+        background: var(--primary-dark);
+        color: var(--light);
+        cursor: pointer;
+      }
+
+      &.active {
+        background: var(--primary);
+        color: var(--light);
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    margin: 1rem 0;
+
+    video {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
 /* About Section Styles */
 .about {
   max-width: 80%;
@@ -561,12 +607,6 @@ nav {
       }
 
     }
-  }
-
-  video {
-    width: 100%;
-    border-radius: 6px;
-    margin: 3rem 0;
   }
 }
 
