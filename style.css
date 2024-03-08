@@ -220,6 +220,7 @@ nav {
     width: fit-content;
 
     .tab {
+      transition: background 0.3s, color 0.3s;
       padding: 12px 1rem;
       border-radius: 4rem;
 
