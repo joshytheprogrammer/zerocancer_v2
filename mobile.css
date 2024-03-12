@@ -17,265 +17,232 @@
     max-width: 100%;
     padding: 0;
     text-align: center;
-
     border: none;
     border-radius: 0;
     background: none;
-
-    img {
-      width: 80px;
-    }
-
-    .links {
-      display: none;
-    }
-
-    .contact {
-      display: none;
-    }
-
-    .toggleMenu {
-      display: block;
-    }
-
-    .mobile-nav {
-      display: none;
-    }
-
   }
-
+  
+  nav img {
+    width: 80px;
+  }
+  
+  nav .links {
+    display: none;
+  }
+  
+  nav .contact {
+    display: none;
+  }
+  
+  nav .toggleMenu {
+    display: block;
+  }
+  
+  nav .mobile-nav {
+    display: none;
+  }
+  
   .hero {
     margin: 2rem 0;
-
-    h1 {
-      font-size: 28px;
-      line-height: 1.4;
-      font-weight: 700;
-
-      img {
-        top: 51px;
-        left: 239px;
-        max-height: 20px;
-      }
-    }
-
-    p {
-      font-size: 16px;
-      font-weight: 400;
-
-    }
-
-    .waitlist-form  {
-      display: block;
-      font-size: 14px;
-
-      input {
-        width: 100%;
-        border-radius: 6px;
-      }
-
-      button {
-        width: 100%;
-        margin: 1rem 0;
-        border-radius: 6px;
-      }
-      
-    }
   }
-
-  .about {
-    .contact {
-      display: block;
-    }
-
-    .content .f {
-      display: block;
-    }
-
-    .desc {
-      width: 100%;
-      padding: 1rem 0;
-    }
-  }
-
-  .centre {
-    .content {
-      display: block;
-
-    }
-
-    .desc {
-      font-size: 14px;
-    }
-
-    .explorer {
-      display: block;
-      padding: 1rem;
-
-      #loadingIndicator {
-        display: flex;
-        justify-content: center;
-        margin: 1rem auto;
-      }
-
-      select {
-        display: block;
-        margin-bottom: 1rem;
-        width: 100%;
-      }
   
-      button {
-        width: 100%;
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
   
-        .icon {
-          display: none;
-        }
+  .hero h1 img {
+    top: 51px;
+    left: 239px;
+    max-height: 20px;
+  }
   
-        span {
-          display: block;
-          font-size: 16px;
-        }
-      }
-    }
-    
+  .hero p {
+    font-size: 16px;
+    font-weight: 400;
   }
-
-  .envoys {
-    .content {
-      .btns button {
-        width: 100%;
-      }
-    }
-    .table {
-      overflow-x: auto;
-
-      .tbl-header {
-        width: 760px;
-      }
-
-      .tbl-content {
-        width: 760px;
-      }
-
-      .slide-menu {
-        width: 100%;
-        position: fixed;
-        z-index: 99;
-      }
-    }
-  }
-
-  .dvss {
-    .q {
-      display: block;
-
-      .content {
-        display: block;
   
-        .f {
-          display: block;
-        }
-      }
-    }
+  .hero .waitlist-form {
+    display: block;
+    font-size: 14px;
+  }
+  
+  .hero .waitlist-form input {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .hero .waitlist-form button {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 6px;
+  }
+  
+  
+  .about .contact {
+    display: block;
+  }
+  
+  .about .content .f {
+    display: block;
+  }
+  
+  .about .desc {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
 
-    .desc {
-      width: 100%;
-      padding: 1rem 0;
-    }
+  .centre .content {
+    display: block;
+  }
+  
+  .centre .desc {
+    font-size: 14px;
+  }
+  
+  .centre .explorer {
+    display: block;
+    padding: 1rem;
+  }
+  
+  .centre #loadingIndicator {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+  
+  .centre .explorer select {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .centre button {
+    width: 100%;
+  }
+  
+  .centre button .icon {
+    display: none;
+  }
+  
+  .centre button span {
+    display: block;
+    font-size: 16px;
+  }
+  
+  .envoys .content .btns button {
+    width: 100%;
+  }
+  
+  .envoys .table {
+    overflow-x: auto;
+  }
+  
+  .envoys .table .tbl-header {
+    width: 760px;
+  }
+  
+  .envoys .table .tbl-content {
+    width: 760px;
+  }
+  
+  .envoys .table .slide-menu {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+  }
+  
+  .dvss .q {
+    display: block;
+  }
+  
+  .dvss .q .content {
+    display: block;
+  }
+  
+  .dvss .q .content .f {
+    display: block;
+  }
+  
+  .dvss .desc {
+    width: 100%;
+    padding: 1rem 0;
   }
 
-  .blog {
-    .f {
-      display: block;
-      padding: 0;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column-reverse;
-      
-
-      div {
-        padding: 1rem;
-      }
-
-
-    }
-
-
-    
-
-    .head {
-      padding: 1rem 3rem;
-    }
+  .blog .f {
+    display: block;
+    padding: 0;
   }
-
+  
+  .blog .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .blog .content div {
+    padding: 1rem;
+  }
+  
+  .blog .head {
+    padding: 1rem 3rem;
+  }
+  
   .connect {
     margin: 0 1rem;
-    img {
-      display: none;
-    }
-
-    .content {
-      padding: 2rem 0;
-    }
-
-    .connect-form {
-      display: block;
-  
-      input {
-        width: 100%;
-        border-radius: 6px;
-      }
-  
-      button {
-        width: 100%;
-        margin: 1rem 0;
-        border-radius: 6px;
-      }
-  
-    }
-
   }
-
-
-  .modal-container {
-
-    .modal-content {
-      width: 90%;
-      
-    }
-
-    
+  
+  .connect img {
+    display: none;
   }
+  
+  .connect .content {
+    padding: 2rem 0;
+  }
+  
+  .connect .connect-form {
+    display: block;
+  }
+  
+  .connect .connect-form input {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .connect .connect-form button {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 6px;
+  }  
 
+  .modal-container .modal-content {
+    width: 90%;
+  }
+  
   .videos {
     max-width: 80%;
     margin: 5rem auto;
-    
-    .vTab-container {
-
-      .tab {
-        padding: 8px 12px;
-      }
-    }
-  
-    .tab-content {
-      display: none;
-      margin: 1rem 0;
-  
-      video {
-        width: 100%;
-        border-radius: 6px;
-      }
-  
-      &.active {
-        display: block;
-      }
-    }
   }
   
-
+  .videos .vTab-container .tab {
+    padding: 8px 12px;
+  }
+  
+  .videos .tab-content {
+    display: none;
+    margin: 1rem 0;
+  }
+  
+  .videos .tab-content video {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .videos .tab-content.active {
+    display: block;
+  }
+  
   .readLink {
     padding: 0;
   }
@@ -296,93 +263,75 @@
     width: 100%;
     margin: 2rem 0;
   }
-
   
-
   footer {
     padding: 3rem 0;
-
-    .container {
-      max-width: 100%;
-      padding: 0 1rem;
-
-      .content {
-        flex-direction: column;
-      }
-
-      .final {
-        flex-direction: column;
-        align-items: flex-start;
-
-        div {
-          width: 100%;
-          padding: 1rem 0;
-          justify-content: space-between;
-        }
-      }
-    }
   }
-
-
+  
+  footer .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  footer .container .content {
+    flex-direction: column;
+  }
+  
+  footer .container .final {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  footer .container .final div {
+    width: 100%;
+    padding: 1rem 0;
+    justify-content: space-between;
+  }
+  
 }
 
 @media screen and (max-width: 380px) {
-  .hero {
-    h1 {
-      font-size: 24px;
-
-      img {
-        top: 43px;
-        left: 204px;
-      }
-    }
-
-    p {
-      font-size: 14px;
-    }
+  .hero h1 {
+    font-size: 24px;
   }
 
-  footer {
-    .container {
-      .content{ 
-        .f  p{
-          font-size: 14px;
-          a{
-            font-size: 16px;
-          }
-        }
+  .hero img {
+    top: 43px;
+    left: 204px;
+  }
 
-        .s {
-          div {
-            .links {
-              a {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
+  .hero p {
+    font-size: 14px;
+  }
 
-      .final {
-        font-size: 16px;
-      }
-    }
+  footer .container .content .f p {
+    font-size: 14px;
+  }
+
+  footer .container .content .f a {
+    font-size: 16px;
+  }
+
+  footer .container .s div .links a {
+    font-size: 14px;
+  }
+
+  footer .container .final {
+    font-size: 16px;
   }
 }
+
 
 @media screen and (max-width: 332px) {
-  .hero {
-    h1 {
-      font-size: 24px;
+  .hero h1 {
+    font-size: 24px;
+  }
 
-      img {
-        display: none;
-      }
-    }
+  .hero img {
+    display: none;
+  }
 
-    p {
-      font-size: 14px;
-    }
+  .hero p {
+    font-size: 14px;
   }
 }
-
