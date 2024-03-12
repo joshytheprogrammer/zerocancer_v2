@@ -208,9 +208,19 @@ nav .close-btn {
 .videos {
   max-width: 80%;
   margin: 5rem auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
-.videos .vTab-container {
+.videos .content {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0;
+}
+
+.videos .content .vTab-container {
   display: flex;
   /* gap: 1rem; */
   border: 1px solid var(--dark);
@@ -220,19 +230,19 @@ nav .close-btn {
   width: fit-content;
 }
 
-.videos .vTab-container .tab {
+.videos .content .vTab-container .tab {
   transition: background 0.3s, color 0.3s;
   padding: 12px 1rem;
   border-radius: 4rem;
 }
 
-.videos .vTab-container .tab:hover {
+.videos .content .vTab-container .tab:hover {
   background: var(--primary-dark);
   color: var(--light);
   cursor: pointer;
 }
 
-.videos .vTab-container .tab.active {
+.videos .content .vTab-container .tab.active {
   background: var(--primary);
   color: var(--light);
 }
@@ -253,7 +263,6 @@ nav .close-btn {
 
 .samplerVid {
   max-width: 80%;
-  margin-top: 5rem;
   margin: 5rem auto;
   display: grid;
   grid-template-columns: 2fr 6fr;
@@ -264,10 +273,10 @@ nav .close-btn {
 .samplerVid .content {
   display: flex;
   flex-direction: column;
+  margin: 4rem 0;
 }
 
 .samplerVid .content video {
-  margin: 4rem 0;
   width: 100%;
   border-radius: 12px;
 }

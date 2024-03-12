@@ -224,30 +224,39 @@
     max-width: 80%;
     margin: 5rem auto;
   }
+
+  .videos .content {
+    flex-direction: column-reverse;
+    margin: 1rem 0;
+  }
   
-  .videos .vTab-container .tab {
+  .videos .content .vTab-container .tab {
     padding: 8px 12px;
   }
   
-  .videos .tab-content {
+  .videos .content .tab-content {
     display: none;
     margin: 1rem 0;
   }
   
-  .videos .tab-content video {
+  .videos .content .tab-content video {
     width: 100%;
     border-radius: 6px;
   }
   
-  .videos .tab-content.active {
+  .videos .content .tab-content.active {
     display: block;
+  }
+
+  .samplerVid .content {
+    margin: 1rem 0;
   }
   
   .readLink {
     padding: 0;
   }
 
-  .about, .centre, .dvss, .blog, .connect, .envoys, .videos {
+  .about, .centre, .dvss, .blog, .connect, .envoys, .videos, .samplerVid {
     max-width: 100%;
     padding: 0 1rem;
     display: block;
