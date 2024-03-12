@@ -237,22 +237,23 @@ nav .close-btn {
   color: var(--light);
 }
 
-.videos .tab-content {
+.videos .content .tab-content {
   display: none;
   margin: 1rem 0;
 }
 
-.videos .tab-content video {
+.videos .content .tab-content video {
   width: 100%;
   border-radius: 6px;
 }
 
-.videos .tab-content.active {
+.videos .content .tab-content.active {
   display: block;
 }
 
 .samplerVid {
   max-width: 80%;
+  margin-top: 5rem;
   margin: 5rem auto;
   display: grid;
   grid-template-columns: 2fr 6fr;
