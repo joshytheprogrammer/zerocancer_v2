@@ -251,6 +251,26 @@ nav .close-btn {
   display: block;
 }
 
+.samplerVid {
+  max-width: 80%;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.samplerVid .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.samplerVid .content video {
+  margin: 4rem 0;
+  width: 100%;
+  border-radius: 12px;
+}
+
 /* About Section Styles */
 .about {
   max-width: 80%;
