@@ -9,6 +9,10 @@
     height: 600px; 
   }
 
+  .strip {
+    font-size: 8px;
+  }
+
   nav {
     max-width: 100%;
     padding: 0;
@@ -245,6 +249,31 @@
     
   }
 
+  .videos {
+    max-width: 80%;
+    margin: 5rem auto;
+    
+    .vTab-container {
+
+      .tab {
+        padding: 8px 12px;
+      }
+    }
+  
+    .tab-content {
+      display: none;
+      margin: 1rem 0;
+  
+      video {
+        width: 100%;
+        border-radius: 6px;
+      }
+  
+      &.active {
+        display: block;
+      }
+    }
+  }
   
 
   .readLink {
@@ -255,6 +284,10 @@
     max-width: 100%;
     padding: 0 1rem;
     display: block;
+  }
+
+  .envoys {
+    display: none;
   }
 
   .about img,
