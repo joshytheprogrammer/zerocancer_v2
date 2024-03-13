@@ -938,6 +938,16 @@ button[disabled],
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.modal-container .modal-content .badge {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light);
+  padding: .5rem;
+  border-radius: 12px;
+  background-color: var(--primary);
+  margin-bottom: 1rem;
+}
+
 .modal-container .modal-content header {
   display: flex;
   justify-content: space-between;
@@ -975,6 +985,13 @@ button[disabled],
   margin: 1rem 0;
 }
 
+.modal-container .modal-content #cardContainer .card .badges {
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .modal-container .modal-content #cardContainer .card .badge {
   display: block;
   width: fit-content;
@@ -985,6 +1002,18 @@ button[disabled],
   padding: .4rem 1rem;
   margin-bottom: 1rem;
   border-radius: 4rem;
+}
+
+.modal-container .modal-content #cardContainer .card .sBadge {
+  background-color: var(--primary-dark);
+  color: var(--light);
+  font-size: 12px;
+  font-weight: 500;
+  padding: .4rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  display: block;
+  width: fit-content;
 }
 
 .modal-container .modal-content #cardContainer .card .loc,

@@ -97,18 +97,31 @@ searchCentreButton.addEventListener('click', () => {
 const showModal = (centres) => {
   modalTitle.textContent = 'Centres Available';
   
+  centres.sort((a, b) => {
+    if (a.isSeller && !b.isSeller) {
+      return -1; // a comes before b
+    } else if (!a.isSeller && b.isSeller) {
+      return 1; // b comes before a
+    } else {
+      return 0; // leave the order unchanged
+    }
+  });
+
   centres.forEach((centre) => {
     cardContainer.innerHTML += `
     <h2>${centre.name}</h2>
     <p>${centre.managerName}</p>
 
     <div class="card">
-      <div class="badge">${centre.services}</div>
+      <div class="badges">
+        <div class="badge">${centre.services}</div>
+        ${centre.isSeller ? '<div class="sBadge">Seller</div>' : ''}
+      </div>
       <div class="loc">
         <p>${centre.name} is located at</p>
         <p>
           <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
-            <span>${centre.address}</span>
+          <span>${centre.address}</span>
         </p>
       </div>
       <div class="inq">
@@ -122,7 +135,7 @@ const showModal = (centres) => {
     </div>
     `;
   });
-  
+
   
   modalContainer.style.display = 'flex';
 };
