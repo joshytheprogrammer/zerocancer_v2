@@ -131,7 +131,7 @@ const showModal = (centres) => {
             <span>${centre.phone}</span>
           </p>
       </div>
-      <a href="${centre.formLink}" >Schedule an appointment</a>
+      <a href="${centre.formLink}" >${centre.isSeller ? 'Schedule a Purchase' : 'Schedule an appointment'}</a>
     </div>
     `;
   });
