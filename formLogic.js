@@ -118,20 +118,26 @@ const showModal = (centres) => {
         ${centre.isSeller ? '<div class="sBadge">Seller</div>' : ''}
       </div>
       <div class="loc">
-        <p>${centre.name} is located at</p>
+        <p>${centre.name} is located here</p>
         <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
-          <span>${centre.address}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+          <a class="address" href="${centre.mapsLink}" target="_blank">
+            <span>(${centre.address.substring(0, 24)}...)</span> 
+            <span>Find on maps</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 2048 2048"><path fill="currentColor" d="M2048 0v1664h-384v384H0V384h384V0zm-128 1536V128H512v256h256v128H128v1408h1408v-640h128v256zm-979-339l-90-90l594-595h-421V384h640v640h-128V603z"/></svg>
+          </a>
         </p>
       </div>
       <div class="inq">
         <p>For inquiries</p>
         <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863q-2.5-2.5-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>
-            <span>${centre.phone}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24"><path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863q-2.5-2.5-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>
+            <span>
+              ${centre.phone.split(',').map((number) => `<a href="tel:${number}" class="phoneLink">${number}</a>`).join(', ')}
+            </span>
           </p>
       </div>
-      <a href="${centre.formLink}" >${centre.isSeller ? 'Schedule a Purchase' : 'Schedule an appointment'}</a>
+      <a class="schedule" href="${centre.formLink}" >${centre.isSeller ? 'Schedule a Purchase' : 'Schedule an appointment'}</a>
     </div>
     `;
   });
