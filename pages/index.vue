@@ -3,6 +3,7 @@
     <LandingStrip />
     <LandingJumbotron />
     <LandingSampler />
+    <LandingAbout />
   </div>
 </template>
 
