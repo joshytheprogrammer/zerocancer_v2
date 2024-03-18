@@ -4,6 +4,7 @@
     <LandingJumbotron />
     <LandingSampler />
     <LandingAbout />
+    <LandingExplorer />
   </div>
 </template>
 
