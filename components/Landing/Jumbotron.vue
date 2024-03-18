@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron h-[600px] p-4 bg-cover bg-center bg-no-repeat lg:h-[800px] px-20 lg:py-8">
+  <div class="jumbotron h-[600px] p-4 bg-cover bg-center bg-no-repeat lg:h-[800px] lg:px-20 lg:py-8">
     <LandingHelpersMNav />
     <LandingHelpersNav />
 
