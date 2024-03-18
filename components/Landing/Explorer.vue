@@ -1,5 +1,5 @@
 <template>
- <section class="max-w-[80%] mx-auto my-20">
+ <section class="w-full px-4 lg:px-0 lg:max-w-[80%] mx-auto my-20">
     <div class="block lg:grid grid-cols-[2fr_6fr] justify-around items-start">
       <LandingHelpersHead>Explorer</LandingHelpersHead>
       <p class="desc leading-[1.8] text-sm lg:text-base mx-0 my-4">
