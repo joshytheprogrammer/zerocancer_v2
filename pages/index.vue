@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <LandingStrip />
+    <LandingJumbotron />
   </div>
 </template>
 

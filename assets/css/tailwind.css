@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, 
+body {
+  overflow-x: hidden;
+  font-family: 'Mulish', 'Josfine Sans';
+  /* zoom: 0.9; */
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-enter, 
+.fade-leave-active {
+  opacity: 0;
+}
+
+.blur-enter-active,
+.blur-leave-active {
+  transition: all 0.4s;
+}
+
+.blur-enter-from,
+.blur-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.slide-in-enter-active,
+.slide-in-leave-active {
+  transition: all .5s;
+}
+.slide-in-enter, .slide-in-leave-to /* .slide-in-leave-active in <2.1.8 */ {
+  transform: translateX(100%);
+  opacity: 0;
+}
