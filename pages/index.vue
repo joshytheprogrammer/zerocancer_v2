@@ -5,6 +5,7 @@
     <LandingSampler />
     <LandingAbout />
     <LandingExplorer />
+    <LandingFacts />
   </div>
 </template>
 

@@ -87,12 +87,4 @@ const sortingBy = ref('isSeller'); // Set default sorting criteria
 
 <style lang="postcss" scoped>
 
-select:focus {
-  outline: none;
-}
-
-select::placeholder {
-  @apply text-black opacity-60;
-}
-
 </style>
