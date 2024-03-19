@@ -18,15 +18,15 @@
     <button @click="populateCentre" class="w-full lg:w-fit bg-primary-600 text-white text-center h-16 cursor-pointer px-8 py-4 rounded-md border-none" :disabled="selectedRegionID == ''">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3m0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8"/></svg>
     </button>
-    {{ centresToShow }}
+    <LandingHelpersCentreModal v-show="showingModal" :rawCentres="centresToShow" @closeCentreModal="toggleCenterModal" />
   </div>
 </template>
 
 <script setup>
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore';
 const db = useFirestore();
 
-fetchCentres()
+fetchCentres();
 
 const states = ref([]);
 const regions = ref([]);
@@ -37,8 +37,10 @@ const loading = ref(true);
 const selectedStateID = ref('');
 const selectedRegionID = ref('');
 
-const regionToShow = ref([])
-const centresToShow = ref([])
+const regionToShow = ref([]);
+const centresToShow = ref([]);
+
+const showingModal = ref(false);
 
 function populateRegion() {
   selectedRegionID.value = ''
@@ -63,6 +65,7 @@ function populateCentre() {
 
   // Use the centre IDs to filter the relevant centres
   centresToShow.value = centres.value.filter((centre) => centreIds.includes(centre.id));
+  toggleCenterModal()
 }
 
 async function fetchCentres() {
@@ -78,6 +81,9 @@ async function fetchCentres() {
   // console.log(states.value, regions.value, centres.value)
 }
 
+function toggleCenterModal() {
+  showingModal.value = !showingModal.value
+}
 
 </script>
 
