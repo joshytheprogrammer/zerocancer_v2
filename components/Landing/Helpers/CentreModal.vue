@@ -9,20 +9,24 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"/></svg>
           </span>
         </div>
-        <select v-model="sortingBy" class="block w-full mb-4 h-16 border border-primary-600 text-black bg-white text-inherit px-4 py-0 rounded-md border-solid">
-          <option value="isSeller">Is Seller</option>
-          <option value="managerNameAsc">Manager Name in Ascending Order</option>
-          <option value="managerNameDesc">Manager Name in Descending Order</option>
-          <option value="centreNameAsc">Centre Name in Ascending Order</option>
-          <option value="centreNameDesc">Centre Name in Descending Order</option>
-        </select>
+        <form class="max-w-sm my-4">
+          <label class="block mb-2 text-sm font-medium text-primary-900 ">Sort Centres</label>
+          <select v-model="sortingBy" class="block w-full p-2 mb-6 text-sm text-primary-900 border border-primary-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 bg-white ">
+            <option value="isSeller">Is Seller</option>
+            <option value="managerNameAsc">Manager Name in Ascending Order</option>
+            <option value="managerNameDesc">Manager Name in Descending Order</option>
+            <option value="centreNameAsc">Centre Name in Ascending Order</option>
+            <option value="centreNameDesc">Centre Name in Descending Order</option>
+          </select>
+        </form>
+                
         <template v-for="centre in centres" :key="centre.id">
-          <h2 class=" text-2xl">{{centre.name}}</h2>
+          <h2 class="font-semibold text-2xl">{{centre.name}}</h2>
           <p>{{centre.managerName}}</p>
 
           <div class="card border shadow-[0_0_10px_rgba(0,0,0,0.1)] mx-0 my-4 p-4 rounded-lg border-solid border-[rgba(0,0,0,0.1)]">
             <div class="flex justify-start gap-3 flex-wrap">
-              <div class=" block w-fit border border-primary-800 bg-white text-black text-xs mb-4 px-4 py-2 rounded-full border-solid">{{centre.services}}</div>
+              <div class=" block w-fit border bg-primary-200 border-primary-800 text-black text-xs mb-4 px-4 py-2 rounded-full border-solid">{{centre.services}}</div>
               <div v-show="centre.isSeller" class="bg-primary-800 text-white text-xs font-medium block w-fit mb-4 px-4 py-2 rounded-full">Seller</div>
             </div>
             <div class="px-0 py-3">
