@@ -9,6 +9,7 @@
     <LandingVideos />
     <LandingEnvoys />
     <LandingBlog />
+    <LandingConnect />
   </div>
 </template>
 
