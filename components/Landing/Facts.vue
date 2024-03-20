@@ -2,7 +2,7 @@
   <section class="block w-full lg:max-w-[80%] lg:grid grid-cols-[2fr_6fr] justify-around items-start mx-auto my-20 px-4 lg:px-0">
     <LandingHelpersHead>Facts</LandingHelpersHead>
     <div class="content block">
-      <div class="block ">
+      <div class="block my-4">
         <p class="special-p">
           <span class=" colorise">Cervical cancer</span> is the second most common cancer in females in Africa after breast cancer. It is a cause of chronic disease, morbidity, and death.
         </p>
