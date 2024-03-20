@@ -3,13 +3,13 @@
     <LandingHelpersHead>About</LandingHelpersHead>
     <div class="content flex flex-col">
       <div class="block lg:flex items-end justify-start flex-wrap">
-        <p class="w-full px-0 py-4 text-base leading-[1.8]">
+        <p class="w-full px-0 py-4 text-base leading-8">
           Zerocancer is a comprehensive cancer prevention initiative dedicated to minimizing the occurrence of new cases of cervical, breast, prostate, and colon cancers. Our multifaceted approach involves extensive awareness campaigns, public enlightenment, immunization, and screening initiatives. We firmly believe that early detection is key to effective treatment and, as such, we prioritize identifying individuals at high risk through thorough high performance screening processes.
         </p>
         <p @click.prevent="toggleReadMore" v-show="showMore == false" class="text-primary-900 underline py-0 p-0">
           <a class="cursor-pointer" >Read more</a>
         </p>  
-        <div v-show="showMore" class="items-end justify-start leading-[1.8]">
+        <div v-show="showMore" class="items-end justify-start leading-8">
           <div class="paras">
             <p>Our mission extends beyond awareness, as we actively support diagnosed cases in gaining access to the most affordable and appropriate care available. We strive to connect them with healthcare professionals in close proximity and facilitate collaborations with philanthropists and non-profit organizations engaged in cancer treatment. Recognizing that the majority of cancers are preventable or treatable if detected early, our overarching goal is to screen populations at risk, keeping them informed and facilitating opportunities for free or subsidized screening and immunizations.</p>
 
@@ -46,7 +46,7 @@ function toggleReadMore() {
 
 <style lang="postcss" scoped>
 .paras p {
-  @apply leading-[1.8] mb-3;
+  @apply leading-8 mb-3;
 }
 
 </style>

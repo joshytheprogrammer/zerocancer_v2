@@ -10,6 +10,7 @@
     <LandingEnvoys />
     <LandingBlog />
     <LandingConnect />
+    <LandingFooter />
   </div>
 </template>
 
