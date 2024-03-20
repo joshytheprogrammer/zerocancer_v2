@@ -39,6 +39,3 @@
 const activeTab = ref(1);
 </script>
 
-<style lang="postcss" scoped>
-
-</style>
