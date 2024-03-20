@@ -6,6 +6,7 @@
     <LandingAbout />
     <LandingExplorer />
     <LandingFacts />
+    <LandingVideos />
   </div>
 </template>
 

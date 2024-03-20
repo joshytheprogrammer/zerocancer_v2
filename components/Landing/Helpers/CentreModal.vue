@@ -85,6 +85,3 @@ const showingSellerMessageBadge = ref(true);
 const sortingBy = ref('isSeller'); // Set default sorting criteria
 </script>
 
-<style lang="postcss" scoped>
-
-</style>
