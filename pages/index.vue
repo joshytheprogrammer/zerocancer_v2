@@ -8,6 +8,7 @@
     <LandingFacts />
     <LandingVideos />
     <LandingEnvoys />
+    <LandingBlog />
   </div>
 </template>
 

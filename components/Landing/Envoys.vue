@@ -18,7 +18,7 @@
         </button>
       </div>
     </div>
-    <div class="" v-show="loading">
+    <div class="flex justify-start my-4" v-show="loading">
       <GlobalHelpersLoader />
     </div>
     <div class="block lg:table  overflow-x-auto border relative lg:overflow-x-hidden mx-0 my-8 rounded-xl border-solid border-gray-300" v-show="envoysVisible">
