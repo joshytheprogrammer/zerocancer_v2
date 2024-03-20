@@ -7,6 +7,7 @@
     <LandingExplorer />
     <LandingFacts />
     <LandingVideos />
+    <LandingEnvoys />
   </div>
 </template>
 
