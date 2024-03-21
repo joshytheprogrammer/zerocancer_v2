@@ -2,7 +2,7 @@
   <footer class="bg-primary-950 text-white mt-20 py-20">
     <div class=" w-full lg:max-w-[80%] mx-auto px-4 text-white">
         <img src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707606121/zerocancer/zero_cancer-FULL-LOGO_bfny3v.svg" alt="Zero cancer logo" class="w-auto">
-        <div class="content flex flex-col lg:flex-row justify-between">
+        <div class="content flex flex-col lg:flex-row justify-between items-center">
             <div class="f">
                 <p class="my-8">Reach out to us to discover how we can help you <br> with issues relating to cancer.</p>
                 <p><a href="mailto:admin@zerocancer.africa" class="text-white text-3xl">admin@zerocancer.africa</a></p>
@@ -30,8 +30,8 @@
         </div>
         <hr class="my-8">
         <div class="final flex justify-between text-base">
-            <p>&copy; <span id="currentYear"></span> ZeroCancer. All rights reserved.</p>
-            <div class="flex gap-8 font-semibold">
+            <p>&copy; <span class="font-bold text-lg">{{ new Date().getFullYear() }}</span> ZeroCancer. All rights reserved.</p>
+            <div class="flex gap-8 text-xl font-semibold">
                 <p>Legal Notice</p>
                 <p>Terms & Conditions</p>
             </div>
