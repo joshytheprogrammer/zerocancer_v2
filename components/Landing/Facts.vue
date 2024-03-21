@@ -13,7 +13,7 @@
           Just like other cancers, cervical cancer is <span class=" colorise">preventable and treatable if detected early</span>.
         </p>
         <p @click.prevent="toggleReadMore" v-show="showMore == false" class="text-primary-900 underline py-0 p-0">
-          <a class="cursor-pointer" >Read more</a>
+          <a class="cursor-pointer text-xs lg:text-base" >Read more</a>
         </p>  
         <div v-show="showMore" class="leading-5 md:leading-8">
           <div class="paras">
@@ -50,7 +50,7 @@
           </div>
 
           <p @click.prevent="toggleReadMore" v-show="showMore == true" class="text-primary-900 underline py-0 p-0">
-            <a class="cursor-pointer" >Read less</a>
+            <a class="cursor-pointer text-xs lg:text-base" >Read less</a>
           </p>  
         </div>
       </div>
@@ -68,13 +68,13 @@ function toggleReadMore() {
 
 <style lang="postcss" scoped>
 .special-p {
-  @apply text-justify mb-4;
+  @apply text-justify mb-4 text-xs lg:text-base;
 }
 .special-p .colorise {
   @apply text-primary-800;
 }
 
 .readLink {
-  @apply text-primary-900 underline py-0 p-0
+  @apply text-primary-900 underline py-0 p-0;
 }
 </style>
