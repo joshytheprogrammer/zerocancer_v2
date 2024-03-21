@@ -3,8 +3,14 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'fade', mode: 'out-in' }
   },
+  site: {
+    url: 'https://zerocancer.africa',
+    name: 'Zerocancer',
+    description: 'Zerocancer is dedicated to minimizing new cases of cervical, breast, prostate, and colon cancers through extensive awareness campaigns, screening initiatives, and access to affordable care. Our mission extends to supporting diagnosed cases and connecting individuals with high-risk screenings and early interventions.',
+    defaultLocale: 'en', 
+  },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt', 'nuxt-vuefire'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt', 'nuxt-vuefire', '@nuxtjs/seo'],
   vuefire: {
     auth: {
       enabled: false
