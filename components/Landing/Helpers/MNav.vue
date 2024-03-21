@@ -10,8 +10,8 @@
       <div class="mobile-links flex flex-col items-center">
         <a href="#about">About</a>
         <a href="#explorer">Explorer</a>
-        <a href="#dvss">DVSS</a>
-        <a href="#blog">Blog</a>
+        <a href="#facts">Facts</a>
+        <NuxtLink to="/blog">Blog</NuxtLink>
       </div>
     </div>
   </nav>
