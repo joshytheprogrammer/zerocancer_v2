@@ -3,11 +3,11 @@
     <LandingHelpersHead>About</LandingHelpersHead>
     <div class="content flex flex-col">
       <div class="block lg:flex items-end justify-start flex-wrap">
-        <p class="w-full px-0 py-4 text-base leading-8">
+        <p class="w-full px-0 py-4 text-xs md:text-base leading-8">
           Zerocancer is a comprehensive cancer prevention initiative dedicated to minimizing the occurrence of new cases of cervical, breast, prostate, and colon cancers. Our multifaceted approach involves extensive awareness campaigns, public enlightenment, immunization, and screening initiatives. We firmly believe that early detection is key to effective treatment and, as such, we prioritize identifying individuals at high risk through thorough high performance screening processes.
         </p>
         <p @click.prevent="toggleReadMore" v-show="showMore == false" class="text-primary-900 underline py-0 p-0">
-          <a class="cursor-pointer" >Read more</a>
+          <a class="cursor-pointer text-xs md:text-base"  >Read more</a>
         </p>  
         <div v-show="showMore" class="items-end justify-start leading-8">
           <div class="paras">
@@ -27,7 +27,7 @@
           </div>
 
           <p @click.prevent="toggleReadMore" v-show="showMore == true" class="text-primary-900 underline py-0 p-0">
-            <a class="cursor-pointer" >Read less</a>
+            <a class="cursor-pointer text-xs md:text-base" >Read less</a>
           </p>  
         </div>
       </div>
@@ -46,7 +46,7 @@ function toggleReadMore() {
 
 <style lang="postcss" scoped>
 .paras p {
-  @apply leading-8 mb-3;
+  @apply leading-8 mb-3 text-xs md:text-base;
 }
 
 </style>
