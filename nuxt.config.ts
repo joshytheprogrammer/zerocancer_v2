@@ -10,7 +10,13 @@ export default defineNuxtConfig({
     defaultLocale: 'en', 
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt', 'nuxt-vuefire', '@nuxtjs/seo'],
+  modules: [
+    '@nuxtjs/tailwindcss', 
+    'nuxt-icon', 
+    '@pinia/nuxt', 
+    'nuxt-vuefire', 
+    '@nuxtjs/seo'
+  ],
   vuefire: {
     auth: {
       enabled: false
