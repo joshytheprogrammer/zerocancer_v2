@@ -1,8 +1,8 @@
 <template>
   <section class="envoys w-full px-4 lg:px-0 lg:max-w-[80%] mx-auto my-20">
     <div class="content flex flex-col gap-4">
-      <h2 class=" text-2xl font-normal">Zerocancer Envoys</h2>
-      <p class=" px-0 py-3">We have a list of professional healthcare workers who are passionate about our cause, ranging from different specialties. Are you a healthcare worker? Why don't you join us and fight the battle for zero cancer. <a class=" text-primary-600 underline" href="https://forms.gle/yri85hThoptuHqf27">Click here to join</a></p>
+      <h2 class="text-xl lg:text-2xl ">Zerocancer Envoys</h2>
+      <p class="text-xs lg:text-base px-0 py-3">We have a list of professional healthcare workers who are passionate about our cause, ranging from different specialties. Are you a healthcare worker? Why don't you join us and fight the battle for zero cancer. <a class=" text-primary-600 underline" href="https://forms.gle/yri85hThoptuHqf27">Click here to join</a></p>
       <div class="btns">
         <button class=" w-full shadow-[0_4px_8px_rgba(0,0,0,0.1)] border border-primary-600 text-left cursor-pointer lg:w-96 h-16 flex justify-between items-center px-4 py-0 rounded-md border-solid bg-white" @click="listEnvoys" v-show="!envoysVisible">
           <span>List Envoys</span>
@@ -60,42 +60,42 @@
             <span class="close-button block text-xl cursor-pointer" @click="closeSlideMenu">&times;</span>
           </div>
           <div class="body p-4">
-            <img class=" w-[300px] max-h-[400px] rounded-xl" :src="selectedEnvoy.profileImage" :alt="'profile for ' + selectedEnvoy.fullName + ' in zero cancer envoy list.'">
+            <img class=" lg:w-[300px] lg:max-h-[400px] rounded-xl" :src="selectedEnvoy.profileImage" :alt="'profile for ' + selectedEnvoy.fullName + ' in zero cancer envoy list.'">
             <div class="values flex flex-col gap-4 px-0 py-4">
-              <div class="fi_">
-                <h2 class="text-lg font-medium">{{ selectedEnvoy.fullName }}</h2>
-                <p class="text-sm font-light">{{ selectedEnvoy.title }}</p>
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">{{ selectedEnvoy.fullName }}</h2>
+                <p class="text-xs lg:text-sm font-light">{{ selectedEnvoy.title }}</p>
               </div>
-              <div class="se_">
-                <h2 class="text-lg font-medium">Place of Work</h2>
-                <p class="text-sm font-light">{{ selectedEnvoy.placeOfWork }}</p>
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">Place of Work</h2>
+                <p class="text-xs lg:text-sm font-light">{{ selectedEnvoy.placeOfWork }}</p>
               </div>
-              <div class="th_">
-                <h2 class="text-lg font-medium">Vision Video</h2>
-                <p class="text-sm font-light">
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">Vision Video</h2>
+                <p class="text-xs lg:text-sm font-light">
                   <a class="text-primary-600 cursor-pointer underline" :href="selectedEnvoy.visionLink">
                   {{ selectedEnvoy.fullName?.toLowerCase().replace(/ /g, "_") }}_vision_statement
                   </a>
                 </p>
               </div>
-              <div class="fif_">
-                <h2 class="text-lg font-medium">Vision Statement</h2>
-                <p class="text-sm font-light text-xs">{{ selectedEnvoy.visionStatement }}</p>
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">Vision Statement</h2>
+                <p class="font-light text-[8px] lg:text-xs">{{ selectedEnvoy.visionStatement }}</p>
               </div>
-              <div class="fo_">
-                <h2 class="text-lg font-medium">Specialty</h2>
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">Specialty</h2>
                 <div class="text-sm font-light flex justify-start flex-wrap gap-3 mx-0 my-[0.4rem]">
-                  <div v-for="specialty in selectedEnvoy.specialties" :text-lg font-medium="specialty.id" class=" border border-black w-fit font-light text-sm px-[0.8rem] py-[0.2rem] rounded-full border-solid">{{ specialty.label }}</div>
+                  <div v-for="specialty in selectedEnvoy.specialties" :key="specialty.id" class=" border border-black w-fit font-light text-sm px-[0.8rem] py-[0.2rem] rounded-full border-solid">{{ specialty.label }}</div>
                 </div>
               </div>
-              <div class="six_">
-                <h2 class="text-lg font-medium">Memberships</h2>
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">Memberships</h2>
                 <div class="text-sm font-light flex justify-start flex-wrap gap-3 mx-0 my-[0.4rem]">
-                  <div v-for="membership in selectedEnvoy.memberships" :text-lg font-medium="membership.id" class=" border border-black w-fit font-light text-sm px-[0.8rem] py-[0.2rem] rounded-full border-solid">{{ membership.label }}</div>
+                  <div v-for="membership in selectedEnvoy.memberships" :key="membership.id" class=" border border-black w-fit font-light text-sm px-[0.8rem] py-[0.2rem] rounded-full border-solid">{{ membership.label }}</div>
                 </div>
               </div>
-              <div class="sev_">
-                <h2 class="text-lg font-medium">Qualifications</h2>
+              <div class="">
+                <h2 class="text-base lg:text-lg font-normal lg:font-medium pb-2">Qualifications</h2>
                 <div class="text-sm font-light flex justify-start flex-wrap gap-3 mx-0 my-[0.4rem]">
                   <div v-for="qualification in selectedEnvoy.qualifications" :key="qualification.id" class=" border border-black w-fit font-light text-sm px-[0.8rem] py-[0.2rem] rounded-full border-solid">{{ qualification.label }}</div>
                 </div>
@@ -169,10 +169,6 @@ const closeSlideMenu = () => {
 <style lang="postcss" scoped>
 td {
   @apply text-left align-middle font-light text-sm text-black p-4 border-b-[rgba(255,255,255,0.1)] border-b border-solid;
-}
-
-.envoys .table .slide-menu .content .body .values .value {
-  @apply text-sm font-light;
 }
 
 .envoys ::-webkit-scrollbar {
