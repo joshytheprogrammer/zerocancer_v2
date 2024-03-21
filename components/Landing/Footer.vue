@@ -13,7 +13,7 @@
                     <div class="flex flex-col space-y-6">
                         <a href="#about" class="text-white">About</a>
                         <a href="#explorer" class="text-white">Explorer</a>
-                        <a href="#facts" class="text-white">Mobilab DVSS</a>
+                        <a href="#facts" class="text-white">Some Facts</a>
                         <NuxtLink to="/blog" class="text-white">Blog</NuxtLink>
                     </div>
                 </div>
