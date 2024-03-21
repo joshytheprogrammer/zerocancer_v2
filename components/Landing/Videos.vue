@@ -3,9 +3,9 @@
     <LandingHelpersHead>Videos</LandingHelpersHead>
         
     <div class="flex flex-col-reverse lg:flex-col mx-0 lg:my-16">
-      <div class="text-sm lg:text-base flex border border-black gap-1 w-fit p-1 rounded-full border-solid">
-          <div class=" p-3 lg:px-4 lg:py-3 rounded-full hover:text-white hover:cursor-pointer hover:bg-primary-800" :class="activeTab == 1 ? 'text-white bg-primary-600' : ''" @click="activeTab = 1">Cervical Cancer Awareness</div>
-          <div class=" p-3 lg:px-4 lg:py-3 rounded-full hover:text-white hover:cursor-pointer hover:bg-primary-800" :class="activeTab == 2 ? 'text-white bg-primary-600' : ''"  @click="activeTab = 2">Self Sampling</div>
+      <div class="text-xs lg:text-base flex border border-black gap-1 w-fit p-1 rounded-full border-solid">
+          <div class=" p-2 lg:px-4 lg:py-3 rounded-full hover:text-white hover:cursor-pointer hover:bg-primary-800" :class="activeTab == 1 ? 'text-white bg-primary-600' : ''" @click="activeTab = 1">Cervical Cancer Awareness</div>
+          <div class=" p-2 lg:px-4 lg:py-3 rounded-full hover:text-white hover:cursor-pointer hover:bg-primary-800" :class="activeTab == 2 ? 'text-white bg-primary-600' : ''"  @click="activeTab = 2">Self Sampling</div>
       </div>
 
       <div class="mx-0 my-6" v-show="activeTab == 1">
