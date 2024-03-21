@@ -1,6 +1,6 @@
 <template>
   <section class="block w-full lg:max-w-[80%] lg:grid grid-cols-[2fr_6fr] justify-around items-start mx-auto my-20 px-4 lg:px-0">
-    <LandingHelpersHead>Facts</LandingHelpersHead>
+    <LandingHelpersHead id="facts">Facts</LandingHelpersHead>
     <div class="content block">
       <div class="block my-4">
         <p class="special-p">
