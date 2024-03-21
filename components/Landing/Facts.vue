@@ -15,7 +15,7 @@
         <p @click.prevent="toggleReadMore" v-show="showMore == false" class="text-primary-900 underline py-0 p-0">
           <a class="cursor-pointer" >Read more</a>
         </p>  
-        <div v-show="showMore" class=" leading-8">
+        <div v-show="showMore" class="leading-5 md:leading-8">
           <div class="paras">
             <p class="special-p ">
               Cervical cancer is caused by some strains of virus known as <em>Human Papilloma Virus (HPV)</em>.

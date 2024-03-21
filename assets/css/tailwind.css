@@ -21,7 +21,6 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-
 select {
   appearance: none;
   -webkit-appearance: none;
