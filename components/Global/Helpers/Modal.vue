@@ -1,5 +1,5 @@
 <template>
-  <div tabindex="-1" aria-hidden="true" class="flex  overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full bg-[rgba(0,0,0,0.5)]">
+  <div tabindex="-1" aria-hidden="true" class="flex  overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full px-4 max-h-full bg-[rgba(0,0,0,0.5)]">
     <div class="relative rounded-lg shadow overflow-y-auto w-full max-w-2xl max-h-[90%] m-auto">
         <!-- Modal content -->
       <div class="relative bg-white">
