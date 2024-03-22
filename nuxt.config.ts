@@ -48,12 +48,6 @@ export default defineNuxtConfig({
   },
   gtm: {
     id: 'GTM-KPRKR5WH', 
-    queryParams: {
-      // Add URL query string when loading gtm.js with GTM ID (required when using custom environments)
-      gtm_auth: 'AB7cDEf3GHIjkl-MnOP8qr',
-      gtm_preview: 'env-4',
-      gtm_cookies_win: 'x',
-    },
     defer: true,
     compatibility: true, 
     nonce: '2726c7f26c',
