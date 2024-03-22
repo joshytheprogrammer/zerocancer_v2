@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     'nuxt-icon', 
     '@pinia/nuxt', 
     'nuxt-vuefire', 
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    'nuxt-gtag'
   ],
   vuefire: {
     auth: {
@@ -30,5 +31,19 @@ export default defineNuxtConfig({
       appId: "1:503796621829:web:a2a4a5ee13bff39e94f26c"
     },
   },
+  gtag: {
+    id: 'G-MXRK64V2GQ',
+    initCommands: [
+      // Setup up consent mode
+      ['consent', 'default', {
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+      }]
+    ]
+  }
+  
 })
  
