@@ -15,7 +15,7 @@
     "@pinia/nuxt": "^0.5.1",
     "firebase": "^10.9.0",
     "nuxt": "^3.11.0",
-    "nuxt-icon": "^0.6.9",
+    "nuxt-icon": "^0.6.10",
     "nuxt-vuefire": "^1.0.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",

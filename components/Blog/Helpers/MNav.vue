@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <nav class="flex lg:hidden">
 
-  </div>
+  </nav>
 </template>
 
 <script setup>

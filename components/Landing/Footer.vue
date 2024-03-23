@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-primary-950 text-white mt-20 py-20">
-    <div class=" w-full lg:max-w-[80%] mx-auto px-4 text-white">
+    <div class=" w-full lg:max-w-[80%] mx-auto px-4 lg:px-0 text-white">
         <img src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707606121/zerocancer/zero_cancer-FULL-LOGO_bfny3v.svg" alt="Zero cancer logo" class="w-auto">
         <div class=" flex flex-col lg:flex-row justify-between items-start">
             <div class="">
@@ -23,7 +23,7 @@
                         <a href="#" class="text-white">Facebook</a>
                         <a href="#" class="text-white">Twitter</a>
                         <a href="https://www.linkedin.com/company/zerocancer/" class="text-white">Linkedin</a>
-                        <a href="#" class="text-white">Instagram</a>
+                        <a href="https://youtube.com/@zerocancerafrica" class="text-white">Youtube</a>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-gtag',
     '@zadigetvoltaire/nuxt-gtm',
-    '@nuxtjs/sanity'
+    '@nuxtjs/sanity',
+    'nuxt-icon'
   ],
   vuefire: {
     auth: {
