@@ -1,5 +1,5 @@
 <template>
-  <section class="block w-full lg:max-w-[80%] lg:grid grid-cols-[2fr_6fr] justify-around items-start mx-auto my-20 px-4 lg:px-0">
+  <section id="about" class="block w-full lg:max-w-[80%] lg:grid grid-cols-[2fr_6fr] justify-around items-start mx-auto my-20 px-4 lg:px-0">
     <LandingHelpersHead>About</LandingHelpersHead>
     <div class="content flex flex-col">
       <div class="block lg:flex items-end justify-start flex-wrap">

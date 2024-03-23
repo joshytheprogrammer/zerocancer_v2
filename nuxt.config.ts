@@ -17,8 +17,8 @@ export default defineNuxtConfig({
     'nuxt-vuefire', 
     '@nuxtjs/seo',
     'nuxt-gtag',
-    '@zadigetvoltaire/nuxt-gtm'
-
+    '@zadigetvoltaire/nuxt-gtm',
+    '@nuxtjs/sanity'
   ],
   vuefire: {
     auth: {
@@ -58,6 +58,9 @@ export default defineNuxtConfig({
     ignoredViews: [], 
     trackOnNextTick: false, 
     devtools: true, 
+  },
+  sanity: {
+    minimal: true
   }
   
 })
