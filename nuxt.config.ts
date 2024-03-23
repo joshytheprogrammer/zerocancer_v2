@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     description: 'Zerocancer is dedicated to minimizing new cases of cervical, breast, prostate, and colon cancers through extensive awareness campaigns, screening initiatives, and access to affordable care. Our mission extends to supporting diagnosed cases and connecting individuals with high-risk screenings and early interventions.',
     defaultLocale: 'en', 
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@nuxtjs/tailwindcss', 
     'nuxt-icon', 
@@ -59,8 +59,9 @@ export default defineNuxtConfig({
     trackOnNextTick: false, 
     devtools: true, 
   },
+  
   sanity: {
-    minimal: true
+    
   }
   
 })
