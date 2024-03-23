@@ -2,7 +2,7 @@
   <div class="jumbotron h-fit bg-cover bg-center bg-no-repeat ">
     <BlogHelpersNav />
     <BlogHelpersMNav />
-    <div class="flex justify-start align-middle items-start flex-col max-w-[80%] mx-auto py-16">
+    <div class="flex justify-start align-middle items-start flex-col lg:max-w-[80%] mx-auto py-16 px-4 lg:px-0">
         <div class="w-full space-y-6 md:max-w-[80%] lg:max-w-[60%] text-white">
           <BlogHelpersTag name="Adventure" />
           <h2 class="text-2xl lg:text-4xl leading-snug font-medium lg:font-semibold "> Empowering Lives: A Guide to <br class="hidden lg:block"> Early Cancer Detection </h2>

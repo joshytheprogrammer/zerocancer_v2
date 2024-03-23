@@ -11,9 +11,9 @@
                 <div class="">
                     <h2 class="text-2xl lg:text-3xl font-normal lg:font-bold pb-6">Company</h2>
                     <div class="flex flex-col space-y-6">
-                        <a href="#about" class="text-white">About</a>
-                        <a href="#explorer" class="text-white">Explorer</a>
-                        <a href="#facts" class="text-white">Some Facts</a>
+                        <a href="/#about" class="text-white">About</a>
+                        <a href="/#explorer" class="text-white">Explorer</a>
+                        <a href="/#facts" class="text-white">Some Facts</a>
                         <NuxtLink to="/blog" class="text-white">Blog</NuxtLink>
                     </div>
                 </div>
