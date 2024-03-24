@@ -15,7 +15,7 @@
             {{ data.summary }}
           </p>
         </div>
-        <NuxtLink :to="'/blog/'+data.slug.current">
+        <NuxtLink class="block" :to="'/blog/'+data.slug.current">
           <button class="bg-transparent border border-white rounded-xl px-8 py-3 hover:bg-white hover:text-black">
             Read
           </button>

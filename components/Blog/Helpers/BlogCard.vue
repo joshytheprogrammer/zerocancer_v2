@@ -4,14 +4,13 @@
       :asset-id="item.mainImage.asset._ref"
       class="rounded-lg"
       auto="format"
-      bg="000"
-      w="100%"
+      bg="182739"
     />
     
-    <div class="space-y-6">
+    <div class="space-y-4">
       <p class="text-slate-600 text-sm">{{ formatDate(item.publishedAt) }}</p>
       <h4 class="font-bold text-lg">
-        <NuxtLink :to="'/blog/'+item.slug.current">Dream destinations to visit this year in Paris</NuxtLink>
+        <NuxtLink :to="'/blog/'+item.slug.current">{{ item.title }}</NuxtLink>
       </h4>
       <p class="text-sm">{{item.summary}}</p>
     </div>
