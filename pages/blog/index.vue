@@ -1,6 +1,7 @@
 <template>
   <div>
     <BlogJumbotron />
+    <BlogPopular />
     <LandingFooter />
   </div>
 </template>
