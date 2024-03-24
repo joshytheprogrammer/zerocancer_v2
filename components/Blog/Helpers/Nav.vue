@@ -1,7 +1,9 @@
 <template>
   <nav class="hidden lg:block bg-[rgba(0,0,0,0.9)] ">
     <div class="max-w-[80%] flex justify-between items-center mx-auto py-4">
-      <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+      <NuxtLink to="/">
+        <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+      </NuxtLink>
       <div class="text-white flex items-center gap-6">
         <div class="inline-flex gap-6 items-center font-semibold text-sm">
           <NuxtLink to="/">Home</NuxtLink>

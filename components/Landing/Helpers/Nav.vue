@@ -1,6 +1,8 @@
 <template>
   <nav class="hidden lg:flex justify-between items-center border-white bg-primary-200 m-auto px-8 py-4 rounded-full border-2 border-solid max-w-[80%] ">
-    <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+    <NuxtLink to="/">
+      <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+    </NuxtLink>
     <div class="links text-black">
       <a href="#about">About</a>
       <a href="#explorer">Explorer</a>

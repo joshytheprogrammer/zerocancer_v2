@@ -1,6 +1,10 @@
 <template>
   <nav class="flex lg:hidden justify-between items-center m-auto max-w-full text-center p-4 rounded-none border-0 bg-none bg-[rgba(0,0,0,0.9)] ">
-    <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+
+    <NuxtLink to="/">
+      <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+      
+    </NuxtLink>
     <div class="inline-flex items-center gap-4 text-white">
       <div>
         <a href="/search?query=">

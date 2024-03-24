@@ -1,7 +1,9 @@
 <template>
   <footer class="bg-primary-950 text-white mt-20 py-20">
     <div class=" w-full lg:max-w-[80%] mx-auto px-4 lg:px-0 text-white">
-        <img src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707606121/zerocancer/zero_cancer-FULL-LOGO_bfny3v.svg" alt="Zero cancer logo" class="w-auto">
+        <NuxtLink to="/">
+            <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
+        </NuxtLink>
         <div class=" flex flex-col lg:flex-row justify-between items-start">
             <div class="">
                 <p class="text-xs lg:text-base my-8">By using our website, you accept our privacy policy. Reach out to us to discover how we can help you  with issues relating to cancer.</p>
