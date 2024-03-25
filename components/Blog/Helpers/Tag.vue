@@ -1,5 +1,5 @@
 <template>
-  <div class="block w-fit bg-[rgba(82,82,82,0.32)] text-white px-2 py-1 text-xs font-bold rounded-lg uppercase">
+  <div class="block w-fit bg-[rgba(72,72,72,0.32)] text-white px-2 py-1 text-xs font-bold rounded-lg uppercase">
     <span>{{ name }}</span>
   </div>
 </template>
