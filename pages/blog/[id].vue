@@ -1,8 +1,11 @@
 <template>
   <div>
-    <BlogPostJumbotron :item="data" />
-    <BlogPost :content="data.body" />
-    <BlogMore :slug="data.slug.current" />
+    <GlobalHelpersLoader class="my-4" v-if="pending"/>
+    <template v-else>
+      <BlogPostJumbotron :item="data" />
+      <BlogPost :content="data.body" />
+      <BlogMore :slug="data.slug.current" />
+    </template>
     <LandingFooter />
   </div>
 </template>
@@ -14,7 +17,7 @@ const query = groq`*[_type == "post" && slug.current == $slug] | order(published
   categories[]->{title, _id},
 }[0]`
 
-const { data, pending, refresh } = useSanityQuery(query, {slug: route.params.id});
+const { data, pending, error, refresh } = useSanityQuery(query, {slug: route.params.id});
 
 </script>
 

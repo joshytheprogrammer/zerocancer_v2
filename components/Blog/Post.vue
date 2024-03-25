@@ -14,11 +14,23 @@ const props = defineProps(['content']);
 }
 
 .post h2 {
-  @apply font-bold text-2xl my-4 text-primary-950;
+  @apply font-bold text-3xl my-4 text-primary-950;
 }
 
 .post h3 {
+  @apply font-bold text-2xl my-4 text-primary-950;
+}
+
+.post h4 {
   @apply font-bold text-xl my-4 text-primary-950;
+}
+
+.post h5 {
+  @apply font-bold text-lg my-4 text-primary-950;
+}
+
+.post h6 {
+  @apply font-bold text-[17px] my-4 text-primary-950;
 }
 
 .post p {
