@@ -1,6 +1,9 @@
 <template>
   <div class="post w-full lg:max-w-[80%] mx-auto py-16 px-4 lg:px-0">
     <SanityContent :blocks="content" />
+    <button type="button" class="text-white focus:ring-1 focus:outline-none font-medium rounded-lg text-sm my-4 px-5 py-2.5 text-center bg-primary-900 focus:ring-primary-900" @click="$router.push('/blog')">
+      Back
+    </button>
   </div>
 </template>
 
