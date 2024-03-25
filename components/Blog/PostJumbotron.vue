@@ -3,7 +3,7 @@
     <BlogHelpersNav />
     <BlogHelpersMNav />
 
-    <div class="flex justify-center align-middle items-center text-center flex-col lg:max-w-[80%] mx-auto py-16 px-4 lg:px-0 bg-[rgba(0,0,0,0.5)]">
+    <div class="flex justify-center align-middle items-center text-center flex-col lg:max-w-[80%] mx-auto py-16 px-4 lg:px-0 bg-[rgba(0,0,0,0.7)]">
       <div class="w-full space-y-6 md:max-w-[80%] lg:max-w-[60%] text-white">
         <div class="inline-flex gap-4 items-center">
           <BlogHelpersTag v-for="category in item.categories" :key="category._id" :name="category.title" />

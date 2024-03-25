@@ -10,9 +10,13 @@
     <div class="space-y-4">
       <p class="text-slate-600 text-sm">{{ formatDate(item.publishedAt) }}</p>
       <h4 class="font-bold text-lg">
-        <NuxtLink :to="'/blog/'+item.slug.current">{{ item.title }}</NuxtLink>
+        <NuxtLink :to="'/blog/'+item.slug.current">
+          {{ item.title.length > 60 ? item.title.substring(0, 55) + "..." : item.title }}
+        </NuxtLink>
       </h4>
-      <p class="text-sm">{{item.summary}}</p>
+      <p class="text-sm">
+        {{ item.summary.length > 140 ? item.summary.substring(0, 140) + "..." : item.summary }}
+      </p>
     </div>
   </div>
 </template>

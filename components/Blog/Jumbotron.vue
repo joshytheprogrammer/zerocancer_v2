@@ -12,7 +12,7 @@
           <p>{{ formatDate(data.publishedAt) }}</p>
           <div class="w-12 h-[.1px] bg-white"></div>
           <p class="font-light text-sm lg:text-base">
-            {{ data.summary }}
+            {{ data.summary.length > 140 ? data.summary.substring(0, 140) + "..." : data.summary }}
           </p>
         </div>
         <NuxtLink class="block" :to="'/blog/'+data.slug.current">
