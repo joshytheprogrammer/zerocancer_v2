@@ -2,6 +2,7 @@
   <div>
     <BlogPostJumbotron :item="data" />
     <BlogPost :content="data.body" />
+    <BlogMore :slug="data.slug.current" />
     <LandingFooter />
   </div>
 </template>
@@ -13,9 +14,8 @@ const query = groq`*[_type == "post" && slug.current == $slug] | order(published
   categories[]->{title, _id},
 }[0]`
 
-const { data, refresh } = useSanityQuery(query, {slug: route.params.id});
+const { data, pending, refresh } = useSanityQuery(query, {slug: route.params.id});
 
-console.log(data.value)
 </script>
 
 <style lang="scss" scoped>

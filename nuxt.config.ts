@@ -62,7 +62,11 @@ export default defineNuxtConfig({
   },
   
   sanity: {
-    
+    // visualEditing: {
+    //   token: process.env.NUXT_SANITY_VISUAL_EDITING_TOKEN,
+    //   studioUrl: process.env.NUXT_SANITY_VISUAL_EDITING_STUDIO_URL,
+    // },
+    apiVersion: '2021-10-18',
   }
   
 })
