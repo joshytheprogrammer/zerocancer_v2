@@ -1,7 +1,8 @@
 <template>
   <div>
     <BlogPostJumbotron :item="data" />
-    {{data}}
+    <BlogPost :content="data.body" />
+    <LandingFooter />
   </div>
 </template>
 
