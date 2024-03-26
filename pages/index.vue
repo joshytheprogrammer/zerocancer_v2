@@ -7,7 +7,7 @@
     <LandingExplorer />
     <LandingFacts />
     <LandingVideos />
-    <LandingEnvoys />
+    <!-- <LandingEnvoys /> -->
     <LandingBlog />
     <LandingConnect />
     <LandingFooter />

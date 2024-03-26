@@ -31,7 +31,6 @@ const query = groq`*[_type == "post"] | order(publishedAt desc) [0]{
 
 const { data, refresh } = useSanityQuery(query);
 
-console.log(data.value)
 </script>
 
 <style lang="scss" scoped>
