@@ -41,7 +41,7 @@
               <td>
                 <div class="name flex items-center gap-2">
                   <img class=" object-cover w-14 h-14 rounded-full" :src="envoy.profileImage" alt="profile">
-                  <span>{{ envoy.fullName }}</span>
+                  <span class="cursor-pointer underline px-1 py-0" @click="showEnvoyProfile(envoy.id)">{{ envoy.fullName }}</span>
                 </div>
               </td>
               <td>{{ envoy.placeOfWork }}</td>
