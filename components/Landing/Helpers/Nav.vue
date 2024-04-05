@@ -10,7 +10,7 @@
       <NuxtLink to="/blog">Blog</NuxtLink>
     </div>
     <div class="contact">
-      <a class="text-black px-8 py-4 rounded-full bg-secondary-300" href="mailto:admin@zerocancer.africa">Contact Us</a>
+      <NuxtLink class="text-black px-8 py-4 rounded-full bg-secondary-300" to="/contact">Contact Us</NuxtLink>
     </div>
   </nav>
 </template>

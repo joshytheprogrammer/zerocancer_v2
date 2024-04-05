@@ -2,7 +2,7 @@
   <div>
     <div class="text-white my-4 text-sm flex text-left justify-center items-center lg:text-base" v-if="details.formFilled">
       <div class="bg-green-900 px-4 py-2 rounded-md w-fit" v-if="details.success">
-        <p>You have been added to the Zerocancer Newsletter!</p>
+        <p>You have been added to our Newsletter!</p>
       </div>
       
       <div class="bg-red-900 px-4 py-2 rounded-md w-fit flex gap-4 flex-wrap" v-else>
