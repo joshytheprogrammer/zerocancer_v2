@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     defaultLocale: 'en', 
   },
   devtools: { enabled: false },
+  runtimeConfig: {
+    mailchimpApiKey: '',
+    public: {
+      
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss', 
     'nuxt-icon', 
