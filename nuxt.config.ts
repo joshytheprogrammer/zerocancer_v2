@@ -53,20 +53,6 @@ export default defineNuxtConfig({
       }]
     ]
   },
-  gtm: {
-    id: 'GTM-KPRKR5WH', 
-    defer: false,
-    compatibility: true, 
-    nonce: '2726c7f26c',
-    enabled: true, 
-    debug: true, 
-    loadScript: true, 
-    enableRouterSync: true, 
-    ignoredViews: [], 
-    trackOnNextTick: false, 
-    devtools: true, 
-  },
-  
   sanity: {
     // visualEditing: {
     //   token: process.env.NUXT_SANITY_VISUAL_EDITING_TOKEN,
