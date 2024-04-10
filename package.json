@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "@nuxtjs/seo": "^2.0.0-rc.9",
-    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
-    "nuxt-gtag": "^2.0.5"
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13"
   }
 }

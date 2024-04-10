@@ -22,7 +22,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt', 
     'nuxt-vuefire', 
     '@nuxtjs/seo',
-    'nuxt-gtag',
     '@zadigetvoltaire/nuxt-gtm',
     '@nuxtjs/sanity',
     'nuxt-icon'
@@ -41,7 +40,7 @@ export default defineNuxtConfig({
     },
   },
   gtag: {
-    id: 'G-MXRK64V2GQ',
+    id: 'G-CSS2NZLSY0',
     initCommands: [
       // Setup up consent mode
       ['consent', 'default', {
