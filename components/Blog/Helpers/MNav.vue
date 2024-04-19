@@ -27,6 +27,7 @@
             <NuxtLink to="/#about">About</NuxtLink>
             <NuxtLink to="/blog">Blog</NuxtLink>
             <NuxtLink to="/contact">Contact</NuxtLink>
+            <NuxtLink to="/donate">Donate</NuxtLink>
           </div>
           <div class="w-full h-1 bg-black"></div>
           <div class="inline-flex gap-6 items-center">

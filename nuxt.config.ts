@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     'nuxt-vuefire', 
     '@nuxtjs/seo',
     'nuxt-gtag',
-    '@zadigetvoltaire/nuxt-gtm',
     '@nuxtjs/sanity',
     'nuxt-icon'
   ],

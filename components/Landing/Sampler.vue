@@ -1,6 +1,6 @@
 <template>
   <section class="block w-full lg:max-w-[80%] lg:grid grid-cols-[2fr_6fr] justify-around items-start mx-auto my-20 px-4 lg:px-0">
-    <LandingHelpersHead>Sampler</LandingHelpersHead>
+    <LandingHelpersHead id="sampler">Sampler</LandingHelpersHead>
     <div class="content my-4 flex flex-col mx-0 lg:my-16">
       <video class="w-full h-auto rounded-xl" poster="https://res.cloudinary.com/dsgvwxygr/image/upload/v1692189641/zerocancer/poster_r48e44.png" loading="lazy" controls>
         <!-- WebM format -->

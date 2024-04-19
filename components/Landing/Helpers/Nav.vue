@@ -4,13 +4,13 @@
       <img class="w-20" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1707574928/zerocancer/zero_cancer-FULL-LOGO_cnamof.svg" alt="Zero Cancer full Logo">
     </NuxtLink>
     <div class="links text-black">
-      <a href="#about">About</a>
-      <a href="#explorer">Explorer</a>
-      <a href="#facts">Facts</a>
+      <NuxtLink to="#about">About</NuxtLink>
+      <NuxtLink to="#explorer">Explorer</NuxtLink>
+      <NuxtLink to="#facts">Facts</NuxtLink>
       <NuxtLink to="/blog">Blog</NuxtLink>
     </div>
     <div class="contact">
-      <NuxtLink class="text-black px-8 py-4 rounded-full bg-secondary-300" to="/contact">Contact Us</NuxtLink>
+      <NuxtLink class="text-black px-8 py-4 rounded-full bg-secondary-300" to="/donate">Donate</NuxtLink>
     </div>
   </nav>
 </template>
