@@ -1,6 +1,8 @@
 <template>
   <div>
     <DonateLogo />
+    <DonateJumbotron />
+    <DonateFooter />
   </div>
 </template>
 
