@@ -2,6 +2,7 @@
   <div>
     <DonateLogo />
     <DonateJumbotron />
+    <DonateForm />
     <DonateFooter />
   </div>
 </template>
