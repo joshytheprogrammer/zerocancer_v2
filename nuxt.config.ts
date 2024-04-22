@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   runtimeConfig: {
     mailchimpApiKey: '',
+    paystackSecretKey: '',
     public: {
       
     },
