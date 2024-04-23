@@ -30,7 +30,12 @@
 </template>
 
 <script setup>
-const route = useRoute()
+import { doc, setDoc, collection, addDoc } from 'firebase/firestore'
+
+const db = useFirestore();
+const route = useRoute();
+
+let savedForm = reactive({})
 
 const showDonationPage = reactive({
   status: false,
@@ -58,7 +63,9 @@ if (route.query.method == 'verify') {
 async function initializeDonation(formData) {
   setLoading(true, "Please wait while we process your donation information")
   clearNotification()
-  
+
+  savedForm = formData
+
   try {
     await $fetch('/api/payments/donate/initialize', {
       method: "POST",
@@ -91,20 +98,19 @@ async function verifyDonation(ref) {
       body: { 
         ref: ref
       }
-    }).then((res) => {
-      console.log(res)
+    }).then(async (res) => {
+      if(res.status != true) { setNotification('error', res.message+ ' Check console for more'); } 
 
-      if(res.status != true) {
-        setNotification('error', res.message+ ' Check console for more')
-      } 
-
-      if(res.data.status == "success") {
-        setNotification('success', res.message+'! Thank you for your donation')
-        setLoading(false, null)
-      }else {
+      if(res.data.status != "success") {
         setNotification('error', 'An error occurred. Your donation could not reach us')
         setLoading(false, null)
+        return
       }
+
+      setNotification('success', res.message+'! Thank you for your donation')
+
+      await saveDonation(savedForm, res);
+      setLoading(false, null)
     });
   }catch(e) {
     setNotification('error', 'An error occurred. Check console for more')
@@ -112,6 +118,38 @@ async function verifyDonation(ref) {
     setLoading(false, null)
   }
 }
+
+async function saveDonation(sF, res){
+  setLoading(true, "We are saving your donation information")
+  // Define donation data to be saved
+  const data = {
+    ...sF,
+    currency: res.data.currency,
+    paystack : {
+      authorization: res.data.authorization,
+      ip_address: res.data.ip_address,
+      log: res.data.log,
+      createdAt: res.data.createdAt,
+      paidAt: res.data.paid_at
+    }
+  }
+
+  await addDoc(collection(db, "donations"), data)
+  .then(() => {
+    
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    setNotification("error", "An error occurred. Check console for more info.")
+
+    console.error({code: errorCode, message: errorMessage})
+  }).finally(() => {
+    setLoading(false, null)
+  });
+}
+
 
 function setLoading(status, comment) {
   loading.status = status
