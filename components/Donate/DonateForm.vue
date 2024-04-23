@@ -1,7 +1,7 @@
 <template>
   <div class="block w-full px-4 lg:px-0 mx-auto my-20"> 
-    <div class="max-w-[80%] grid grid-cols-2 justify-start items-center gap-8 mx-auto">
-      <img class="col-span-1 w-full h-[640px] object-cover" src="https://images.unsplash.com/photo-1534180079718-c54f5e889c4f?q=80&w=2576&auto=format&fit=crop" loading="lazy" alt="form side">
+    <div class="w-full lg:max-w-[80%] block lg:grid grid-cols-2 justify-start items-center gap-8 mx-auto">
+      <img class="hidden lg:block col-span-1 w-full h-[640px] object-cover" src="https://images.unsplash.com/photo-1534180079718-c54f5e889c4f?q=80&w=2576&auto=format&fit=crop" loading="lazy" alt="form side">
       <div class="col-span-1 space-y-8">
         <div class="mx-auto text-center" v-if="loading.status" >
           <GlobalHelpersLoader/>
