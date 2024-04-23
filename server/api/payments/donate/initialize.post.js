@@ -15,12 +15,16 @@ export default defineEventHandler(async (event) => {
     "callback_url": 'http://localhost:3000/donate?method=verify'
   });
   
-  const response = await fetch("https://api.paystack.co/transaction/initialize", {
-    method: "POST",
-    body: bodyContent,
-    headers: headersList
-  });
+  try{
+    const response = await fetch("https://api.paystack.co/transaction/initialize", {
+      method: "POST",
+      body: bodyContent,
+      headers: headersList
+    });
 
-  return await response.json()
-  // console.log(rawBody.formData, config.paystackSecretKey)
+    return await response.json()
+  }catch (error) {
+    console.error("An error occurred while processing the request:", error);
+    return new Response("Internal Server Error", { status: 500 });
+  }
 })
