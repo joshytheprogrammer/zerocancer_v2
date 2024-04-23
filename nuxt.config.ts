@@ -10,6 +10,13 @@ export default defineNuxtConfig({
     defaultLocale: 'en', 
   },
   devtools: { enabled: false },
+  runtimeConfig: {
+    mailchimpApiKey: '',
+    paystackSecretKey: '',
+    public: {
+      baseUrl: ''
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss', 
     'nuxt-icon', 
@@ -17,7 +24,6 @@ export default defineNuxtConfig({
     'nuxt-vuefire', 
     '@nuxtjs/seo',
     'nuxt-gtag',
-    '@zadigetvoltaire/nuxt-gtm',
     '@nuxtjs/sanity',
     'nuxt-icon'
   ],
@@ -35,7 +41,7 @@ export default defineNuxtConfig({
     },
   },
   gtag: {
-    id: 'G-MXRK64V2GQ',
+    id: 'G-CSS2NZLSY0',
     initCommands: [
       // Setup up consent mode
       ['consent', 'default', {
@@ -47,20 +53,6 @@ export default defineNuxtConfig({
       }]
     ]
   },
-  gtm: {
-    id: 'GTM-KPRKR5WH', 
-    defer: false,
-    compatibility: true, 
-    nonce: '2726c7f26c',
-    enabled: true, 
-    debug: true, 
-    loadScript: true, 
-    enableRouterSync: true, 
-    ignoredViews: [], 
-    trackOnNextTick: false, 
-    devtools: true, 
-  },
-  
   sanity: {
     // visualEditing: {
     //   token: process.env.NUXT_SANITY_VISUAL_EDITING_TOKEN,

@@ -17,6 +17,7 @@
     "@sanity/image-url": "^1.0.2",
     "firebase": "^10.9.0",
     "nuxt": "^3.11.0",
+    "nuxt-gtag": "^2.0.5",
     "nuxt-icon": "^0.6.10",
     "nuxt-vuefire": "^1.0.2",
     "pinia": "^2.1.7",
@@ -25,8 +26,6 @@
     "vuefire": "^3.1.23"
   },
   "devDependencies": {
-    "@nuxtjs/seo": "^2.0.0-rc.9",
-    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
-    "nuxt-gtag": "^2.0.5"
+    "@nuxtjs/seo": "^2.0.0-rc.9"
   }
 }

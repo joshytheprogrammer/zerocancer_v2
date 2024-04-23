@@ -9,7 +9,8 @@
           <NuxtLink to="/">Home</NuxtLink>
           <NuxtLink to="/#about">About</NuxtLink>
           <NuxtLink to="/blog">Blog</NuxtLink>
-          <NuxtLink to="/#">Contact</NuxtLink>
+          <NuxtLink to="/contact">Contact</NuxtLink>
+          <NuxtLink to="/donate">Donate</NuxtLink>
 
         </div>
         <div class="w-[.1px] h-6 bg-white"></div>

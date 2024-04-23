@@ -14,6 +14,7 @@
         <a href="#explorer">Explorer</a>
         <a href="#facts">Facts</a>
         <NuxtLink to="/blog">Blog</NuxtLink>
+        <NuxtLink to="/donate">Donate</NuxtLink>
       </div>
     </div>
   </nav>

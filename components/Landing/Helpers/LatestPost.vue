@@ -29,7 +29,7 @@ const query = groq`*[_type == "post"] | order(publishedAt desc) [0]{
   categories[]->{title, _id},
 }`
 
-const { data, refresh } = useSanityQuery(query);
+const { data, refresh } = await useSanityQuery(query);
 
 </script>
 

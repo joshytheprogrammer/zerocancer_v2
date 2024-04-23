@@ -27,7 +27,6 @@
 </template>
 
 <script setup>
-
 const query = groq`*[_type == "post"] | order(publishedAt desc) [0]{
   _id, title, summary, slug, publishedAt, 
   categories[]->{title, _id},
