@@ -19,7 +19,7 @@
           </GlobalHelpersModal>
         </div>
         <div class="w-full" v-if="loading.status != true">
-          <DonateHelpersForm @submit="initializeDonation" />
+          <DonateHelpersForm @submit="initializeDonation" @vFailed="showVError" />
         </div>
         <div class="" v-if="noty.showing">
           <GlobalHelpersNotification @closeNoty="clearNotification" :message="noty.message" :type="noty.type" />
@@ -57,7 +57,8 @@ if (route.query.method == 'verify') {
 
 async function initializeDonation(formData) {
   setLoading(true, "Please wait while we process your donation information")
-
+  clearNotification()
+  
   try {
     await $fetch('/api/payments/donate/initialize', {
       method: "POST",
@@ -140,6 +141,10 @@ function clearNotification() {
   noty.showing = false
   noty.type = null
   noty.message = null
+}
+
+function showVError(message) {
+  setNotification("error", message)
 }
 </script>
 

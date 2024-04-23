@@ -17,8 +17,6 @@ export default defineEventHandler(async (event) => {
       "cancel_action": config.public.baseUrl+'/donate?method=verify&aRef='+rawBody.formData.paystackReference
     }
   });
-
-  console.log(bodyContent)
   
   try{
     const response = await fetch("https://api.paystack.co/transaction/initialize", {

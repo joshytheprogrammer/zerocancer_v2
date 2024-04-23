@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-const emit = defineEmits(['submit'])
+const emit = defineEmits(['submit', 'vFailed'])
 
 let formData = reactive({
   fullName: '',
@@ -55,6 +55,7 @@ let formData = reactive({
 })
 
 function submitDonateForm() {
+  if(!validate()) {return;}
   emit('submit', formData)
 }
 
@@ -67,6 +68,58 @@ function generateTransactionReference() {
   }
   return result;
 }
+
+function validate() {
+  const { fullName, email, phone, linkedin, amount, reason } = formData;
+  let isValid = true;
+  let errorMessage = '';
+
+  // Check if full name is provided
+  if (!fullName.trim()) {
+    isValid = false;
+    errorMessage += 'Please provide your full name.\n';
+  }
+
+  // Check if email is valid
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    isValid = false;
+    errorMessage += 'Please provide a valid email address.\n';
+  }
+
+  // Check if phone number is provided
+  const nigerianPhoneRegex = /^((\+)?(234)|0)(7|8|9)(0|1)\d{8}$/;
+  if (!nigerianPhoneRegex.test(phone)) {
+    isValid = false;
+    errorMessage += 'Please provide your phone number.\n';
+  }
+
+  // Check if LinkedIn handle is provided
+  if (!linkedin.trim()) {
+    isValid = false;
+    errorMessage += 'Please provide your LinkedIn handle.\n';
+  }
+
+  // Check if amount is provided and is a valid number
+  if (!amount.trim() || isNaN(parseFloat(amount))) {
+    isValid = false;
+    errorMessage += 'Please provide a valid amount.\n';
+  }
+
+  // Check if reason is provided
+  if (!reason.trim()) {
+    isValid = false;
+    errorMessage += 'Please provide a reason for your donation.\n';
+  }
+
+  if (!isValid) {
+    // Emit validation failed event with error message
+    emit('vFailed', errorMessage);
+  }
+
+  return isValid;
+}
+
 </script>
 
 <style lang="scss" scoped>
