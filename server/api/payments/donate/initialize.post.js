@@ -12,7 +12,10 @@ export default defineEventHandler(async (event) => {
     "amount": rawBody.formData.amount*100,
     "reference": rawBody.formData.paystackReference,
     "currency": 'NGN', // T0 be changed
-    "callback_url": config.public.baseUrl+'/donate?method=verify&aRef='+rawBody.formData.paystackReference
+    "callback_url": config.public.baseUrl+'/donate?method=verify&aRef='+rawBody.formData.paystackReference,
+    "metadata": {
+      "cancel_action": config.public.baseUrl+'/donate?method=verify&aRef='+rawBody.formData.paystackReference
+    }
   });
 
   console.log(bodyContent)
