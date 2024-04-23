@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     mailchimpApiKey: '',
     paystackSecretKey: '',
     public: {
-      
+      baseUrl: ''
     },
   },
   modules: [

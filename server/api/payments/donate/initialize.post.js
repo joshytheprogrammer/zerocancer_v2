@@ -12,8 +12,10 @@ export default defineEventHandler(async (event) => {
     "amount": rawBody.formData.amount*100,
     "reference": rawBody.formData.paystackReference,
     "currency": 'NGN', // T0 be changed
-    "callback_url": 'http://localhost:3000/donate?method=verify'
+    "callback_url": config.public.baseUrl+'/donate?method=verify&aRef='+rawBody.formData.paystackReference
   });
+
+  console.log(bodyContent)
   
   try{
     const response = await fetch("https://api.paystack.co/transaction/initialize", {

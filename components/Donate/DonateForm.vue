@@ -3,7 +3,7 @@
     <div class="w-full lg:max-w-[80%] block lg:grid grid-cols-2 justify-start items-center gap-8 mx-auto">
       <img class="hidden lg:block col-span-1 w-full h-[640px] object-cover" src="https://images.unsplash.com/photo-1534180079718-c54f5e889c4f?q=80&w=2576&auto=format&fit=crop" loading="lazy" alt="form side">
       <div class="col-span-1 space-y-8">
-        <h2 class="text-lg lg:text-xl leading-snug font-medium lg:font-semibold ">Ready to make a difference? Donate now</h2>
+        <h2 class="text-lg lg:text-xl leading-snug font-medium lg:font-semibold " v-if="loading.status != true">Ready to make a difference? Donate now</h2>
         <div class="mx-auto text-center" v-if="loading.status" >
           <GlobalHelpersLoader/>
           <p class="py-4">{{ loading.comment }}</p>
@@ -50,8 +50,8 @@ const noty = reactive({
 })
 
 if (route.query.method == 'verify') {
-  if(route.query.ref) {
-    verifyDonation(route.query.ref)
+  if(route.query.aRef) {
+    verifyDonation(route.query.aRef)
   }
 }
 
@@ -98,7 +98,7 @@ async function verifyDonation(ref) {
       } 
 
       if(res.data.status == "success") {
-        setNotification('success', res.message+' Thank you for your donation')
+        setNotification('success', res.message+'! Thank you for your donation')
         setLoading(false, null)
       }else {
         setNotification('error', 'An error occurred. Your donation could not reach us')
