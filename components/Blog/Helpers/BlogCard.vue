@@ -1,24 +1,26 @@
 <template>
-  <div class="flex flex-col items-start gap-6 w-fit max-w-[380px]" >
+  <div class="flex flex-col items-start gap-6 w-fit ">
+  <div class="relative w-full h-[200px] overflow-hidden rounded-lg">
     <SanityImage
       :asset-id="item.mainImage.asset._ref"
-      class="rounded-lg"
+      class="object-fit w-full h-full"
       auto="format"
       bg="182739"
     />
-    
-    <div class="space-y-4">
-      <p class="text-slate-600 text-sm">{{ formatDate(item.publishedAt) }}</p>
-      <h4 class="font-bold text-lg">
-        <NuxtLink :to="'/blog/'+item.slug.current">
-          {{ item.title.length > 60 ? item.title.substring(0, 55) + "..." : item.title }}
-        </NuxtLink>
-      </h4>
-      <p class="text-sm">
-        {{ item.summary.length > 140 ? item.summary.substring(0, 140) + "..." : item.summary }}
-      </p>
-    </div>
   </div>
+
+  <div class="space-y-4">
+    <p class="text-slate-600 text-sm">{{ formatDate(item.publishedAt) }}</p>
+    <h4 class="font-bold text-lg">
+      <NuxtLink :to="'/blog/'+item.slug.current">
+        {{ item.title.length > 60 ? item.title.substring(0, 55) + "..." : item.title }}
+      </NuxtLink>
+    </h4>
+    <p class="text-sm">
+      {{ item.summary.length > 140 ? item.summary.substring(0, 140) + "..." : item.summary }}
+    </p>
+  </div>
+</div>
 </template>
 
 <script setup>

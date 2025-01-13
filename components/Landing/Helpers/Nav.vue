@@ -10,7 +10,7 @@
       <NuxtLink to="/blog">Blog</NuxtLink>
     </div>
     <div class="contact">
-      <NuxtLink class="text-black px-8 py-4 rounded-full bg-secondary-300" to="/donate">Donate</NuxtLink>
+      <NuxtLink class="text-black px-8 py-4 rounded-full bg-secondary-300" @click.prevent="alert('Coming soon')" to="/#">Donate</NuxtLink>
     </div>
   </nav>
 </template>

@@ -2,7 +2,7 @@
   <section class="envoys w-full px-4 lg:px-0 lg:max-w-[80%] mx-auto my-20">
     <div class="content flex flex-col gap-4">
       <h2 class="text-xl lg:text-2xl ">Zerocancer Envoys</h2>
-      <p class="text-xs lg:text-base px-0 py-3">We have a list of professional healthcare workers who are passionate about our cause, ranging from different specialties. Are you a healthcare worker? Why don't you join us and fight the battle for zero cancer. <a class=" text-primary-600 underline" href="https://forms.gle/yri85hThoptuHqf27">Click here to join</a></p>
+      <p class="text-xs lg:text-base px-0 py-3">We have a list of professional healthcare workers who are passionate about our cause, ranging from different specialties. Are you a healthcare worker? Why don't you join us and fight the battle for zero cancer in africa. <a class=" text-primary-600 underline" href="https://forms.gle/yri85hThoptuHqf27">Click here to join</a></p>
       <div class="btns">
         <button class=" w-full shadow-[0_4px_8px_rgba(0,0,0,0.1)] border border-primary-600 text-left cursor-pointer lg:w-96 h-16 flex justify-between items-center px-4 py-0 rounded-md border-solid bg-white" @click="listEnvoys" v-show="!envoysVisible">
           <span>List Envoys</span>
@@ -109,7 +109,7 @@
 </template>
 
 <script setup>
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from "firebase/firestore";
 const db = useFirestore();
 
 const loading = ref(true);
@@ -118,12 +118,15 @@ const slideMenuActive = ref(false);
 const envoys = ref([]);
 const selectedEnvoy = ref([]);
 
-fetchEnvoys();
-
+// Only fetches where active is set to true
 async function fetchEnvoys() {
   try {
     const data = [];
-    const envoysSnapshot = await getDocs(collection(db, "envoys"));
+    const envoysQuery = query(
+      collection(db, "envoys"),
+      where("active", "==", true) // Fetch only envoys where "active" is true
+    );
+    const envoysSnapshot = await getDocs(envoysQuery);
     envoysSnapshot.forEach((doc) => {
       data.push({ id: doc.id, ...doc.data() });
     });
@@ -132,7 +135,7 @@ async function fetchEnvoys() {
   } catch (error) {
     console.error("Error fetching data from Firestore:", error);
   }
-};
+}
 
 const listEnvoys = () => {
   envoysVisible.value = true;
@@ -143,20 +146,22 @@ const hideEnvoys = () => {
 };
 
 const formatDate = (date) => {
-  return date ? date.toDate().toLocaleString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  }) : '';
+  return date
+    ? date.toDate().toLocaleString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    : "";
 };
 
 const showEnvoyProfile = (envoyId) => {
-  const envoy = envoys.value.find(envoy => envoy.id === envoyId);
+  const envoy = envoys.value.find((envoy) => envoy.id === envoyId);
   if (envoy) {
     selectedEnvoy.value = envoy;
     slideMenuActive.value = true;
   } else {
-    selectedEnvoy.value = []
+    selectedEnvoy.value = [];
     alert("Envoy not found with the specified ID.");
   }
 };
@@ -164,7 +169,11 @@ const showEnvoyProfile = (envoyId) => {
 const closeSlideMenu = () => {
   slideMenuActive.value = false;
 };
+
+// Fetch data on component mount
+fetchEnvoys();
 </script>
+
 
 <style lang="postcss" scoped>
 td {
